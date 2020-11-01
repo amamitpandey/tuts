@@ -1,0 +1,144 @@
+# loader using matrial angular
+
+Guide Link : https://www.thecodehubs.com/display-loader-in-angular-8/
+
+npm install --save @angular/material @angular/cdk @angular/animations
+
+# in style.css
+
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+# in app.module.ts 
+
+...
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HttpClientModule } from '@angular/common/http';
+...
+
+imports: [
+    ...
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+    ...
+  ],
+  
+# Create an Interface for loader state.
+
+$ ng g interface LoaderState
+
+in loaderState
+export interface LoaderState {
+    show: boolean;
+}
+
+# Create a service for the loader.
+
+$ ng g s Loader
+
+in loader.service.ts
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { LoaderState } from './Loader-State';
+@Injectable({
+  providedIn: 'root'
+})
+export class LoaderService {
+  private loaderSubject = new Subject<LoaderState>();
+  loaderState = this.loaderSubject.asObservable();
+  constructor() { }
+  show() {
+    this.loaderSubject.next(<LoaderState>{ show: true });
+  }
+  hide() {
+    this.loaderSubject.next(<LoaderState>{ show: false });
+  }
+}
+
+# Create a component for the loader.
+
+$ ng g c loader
+
+Open the “loader.component.html” file and replace the following code.
+
+<div class="progress-loader" *ngIf="loading">
+    <mat-progress-spinner [mode]="'indeterminate'">
+    </mat-progress-spinner>
+</div>
+
+
+Open the “loader.component.css” file and add the following code.
+
+.progress-loader{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.3);
+}
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #665b7d;
+}
+
+
+Open the “loader.component.ts” file and replace the following code.
+
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LoaderService } from '../loader.service';
+import { LoaderState } from '../Loader-State';
+@Component({
+  selector: 'app-loader',
+  templateUrl: './loader.component.html',
+  styleUrls: ['./loader.component.css']
+})
+export class LoaderComponent implements OnInit {
+  loading = false;
+  private subscription: Subscription;
+  constructor(private loaderService: LoaderService) { }
+  ngOnInit() {
+    this.subscription = this.loaderService.loaderState
+      .subscribe((state: LoaderState) => {
+        this.loading = state.show;
+      });
+  }
+}
+
+
+Open the “app.component.html” file and replace the following code.
+
+<app-loader></app-loader>
+<button (click)="show()">Start</button> 
+<button (click)="stop()">Stop</button>
+<router-outlet></router-outlet>
+
+
+Open the “app.component.ts” file and replace the following code.
+
+
+
+import { Component } from '@angular/core';
+import { LoaderService } from './loader.service';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Angular8Loader';
+  constructor(private loaderService: LoaderService) {
+  }
+  show() {
+    this.loaderService.show();
+  }
+  stop() {
+    this.loaderService.hide();
+  }
+}
+
+
+
