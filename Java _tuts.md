@@ -15,6 +15,8 @@ Java code -> compiler -> java byte code (.class) -> JVM(interpreter+JIT) -> OS -
 
 # Basic Java code
 
+```
+
 public class CustomeClass {
 
    // it's like a constructor call by itself by call this class
@@ -37,6 +39,7 @@ public class CustomeClass {
    }
 }
 
+``` 
 #** Access modifier 
 Default - if it’s blank, only access from package
 Public - it can be access in the world
