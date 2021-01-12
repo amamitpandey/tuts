@@ -249,4 +249,18 @@ s1="test1"; // save in heap memory
 - String buffer has more option like, replace,reverse rather than string, most case use in threads, but slow.
 - StringBuilder is good option than String, option like, replace, reverse but its is not useful in threads. 
 
+**this**  keyword refer current class, current method like Javascript
 
+## OOPS has four piller : PI EA
+
+P : polymorphism
+I : inheritance 
+E : Encapsulation
+A : abstraction
+
+## inheritance use extends to call parent class.
+
+**Inheretance type** 
+- sigle a->b
+- multi a->b, a->c
+- multi level : a->b->c
