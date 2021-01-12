@@ -264,3 +264,56 @@ A : abstraction
 - single a->b
 - multi a->b, a->c
 - multi level : a->b->c
+
+**super keyword**
+like this refer current method or current class, like super refer just parent class
+
+```
+    public void printSuper(){
+        // car is super class for this method
+        System.out.println("example of super key word" + super.tiers); // example of super key word 4
+    }
+    
+    class Car {
+    public int tiers = 4;
+    }
+ ```
+ ## final keyword
+ - final class/variable can't modify, same or from another class 
+ - final class are not extendble
+ - final method can't override
+ 
+ ## final vs static
+ - in same same class can't modify
+ - from another class static variable are modifilable but final can't.
+ 
+ ```
+public class TestInheritance extends Car {
+
+    public static void main(String[] args) {
+        TestInheritance testInheritance = new TestInheritance();
+        System.out.println("staticVar"+ testInheritance.staticVar);
+        testInheritance.staticVar = 222;
+        System.out.println("staticVa updated "+ staticVar);
+        System.out.println("finalVar "+ testInheritance.finalVar);
+        //testInheritance.finalVar = 333; // give compiler error
+        System.out.println("finalVar updated "+ testInheritance.finalVar);
+    }
+
+}
+
+class Car {
+    final int finalVar = 20;
+    static int staticVar = 30;
+}
+
+// output
+
+staticVar30
+staticVa updated 222
+finalVar 20
+finalVar updated 20
+
+
+```
+ 
