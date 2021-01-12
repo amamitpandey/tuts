@@ -261,6 +261,6 @@ A : abstraction
 ## inheritance use extends to call parent class.
 
 **Inheretance type** 
-- sigle a->b
+- single a->b
 - multi a->b, a->c
 - multi level : a->b->c
