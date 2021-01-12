@@ -1,6 +1,6 @@
-#Java tuts
+# Java tuts
 
-Benefit of java
+**Benefit of java**
 Performance - compilable language, use multi thread
 Security - secure it’s use JVM everything run within virtual machine
 robust/stronage - use garbage collector, auto remove unnecessary data
@@ -10,10 +10,10 @@ JDK(java development kit) = JRE + additional lib
 JRE(Java runtime Environment ) = JVM + operating system + other run environment.
 ** we can create a own JVM by using standard oracle/sun definition
 
-Java workflow
+**Java workflow**
 Java code -> compiler -> java byte code (.class) -> JVM(interpreter+JIT) -> OS -> run
 
-# Basic Java code
+## Basic Java code
 
 ```
 
@@ -40,28 +40,29 @@ public class CustomeClass {
 }
 
 ``` 
-#** Access modifier 
+## Access modifier 
 Default - if it’s blank, only access from package
 Public - it can be access in the world
 Private - only access from package
 Protected - it can access by sub class like number and double
 
-#** Non access modifier
+## Non access modifier
 Static - create a instance and call method by class object for class, for variable treat as const
 Final - like const can’t change the value
 Abstract - calling an existing method of super call in sub call,need to declare both sub class and method as abstract.   
 Synchronised - threads work parallelly to make them work sync, use these keywords.   
 Volatile - maximum time variable use cache data, to use recent data of var we use these keywords.
 
-#** primitive and non-primitive
+## primitive and non-primitive
 
 Primitive is predefined data type like - String, int, double.
 Non-primitive is user define data type like student bean.
 
-#** there is two way for serialize data
+## there is two way for serialize data
 
-# first using getter and setter
-# Second by using class and constructor
+- first using getter and setter
+- Second by using class and constructor
+```
 
 Name name = new Name("FirstName", "LastName"); // storing/setting data
 System.out.println("Name is " + name.firstName + " " + name.LastName);// getting data
@@ -76,6 +77,7 @@ class Name {
    }
 }
 
+```
 
 #** Variable conversion
 Explicit conversion :
