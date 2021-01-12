@@ -1,16 +1,18 @@
 # Java tuts
 
 **Benefit of java**
-Performance - compilable language, use multi thread
-Security - secure it’s use JVM everything run within virtual machine
-robust/stronage - use garbage collector, auto remove unnecessary data
-Error handler - technically specific error handle rather than others language.  
+
+- Performance - compilable language, use multi thread
+- Security - secure it’s use JVM everything run within virtual machine
+- robust/stronage - use garbage collector, auto remove unnecessary data
+- Error handler - technically specific error handle rather than others language.  
 
 JDK(java development kit) = JRE + additional lib
 JRE(Java runtime Environment ) = JVM + operating system + other run environment.
 ** we can create a own JVM by using standard oracle/sun definition
 
 **Java workflow**
+
 Java code -> compiler -> java byte code (.class) -> JVM(interpreter+JIT) -> OS -> run
 
 ## Basic Java code
@@ -41,17 +43,19 @@ public class CustomeClass {
 
 ``` 
 ## Access modifier 
-Default - if it’s blank, only access from package
-Public - it can be access in the world
-Private - only access from package
-Protected - it can access by sub class like number and double
+
+- Default - if it’s blank, only access from package
+- Public - it can be access in the world
+- Private - only access from package
+- Protected - it can access by sub class like number and double
 
 ## Non access modifier
-Static - create a instance and call method by class object for class, for variable treat as const
-Final - like const can’t change the value
-Abstract - calling an existing method of super call in sub call,need to declare both sub class and method as abstract.   
-Synchronised - threads work parallelly to make them work sync, use these keywords.   
-Volatile - maximum time variable use cache data, to use recent data of var we use these keywords.
+
+- Static - create a instance and call method by class object for class, for variable treat as const
+- Final - like const can’t change the value
+- Abstract - calling an existing method of super call in sub call,need to declare both sub class and method as abstract.   
+- Synchronised - threads work parallelly to make them work sync, use these keywords.   
+- Volatile - maximum time variable use cache data, to use recent data of var we use these keywords.
 
 ## primitive and non-primitive
 
@@ -79,19 +83,22 @@ class Name {
 
 ```
 
-#** Variable conversion
+## Variable conversion
+```
 Explicit conversion :
 double d = 10d
 integer i = (int) d;
 Data conversion
 String s = ”343”;
 integer i = interger.parseof(s)
+```
 
-#** call by value : calling/invoking a method by passing argument 
+## call by value : calling/invoking a method by passing argument 
 
-#** Method overloading is the same as polymorphism. 
+## Method overloading is the same as polymorphism. 
 
-#** implement vs extends
+## implement vs extends
+```
 
 public interface ExampleInterface { 
 public void doAction(); 
@@ -132,8 +139,10 @@ s.getNb2(); //returns 3
 SuperClass sup = new SuperClass(); 
 sup.getNb(); //returns 1 
 sup.getNb2(); //returns 2
+```
 
-#** Declare a Array
+## Declare a Array
+```
 int a[] = new int[5];
 // Assign a array value
 int a[] = { a, b, 3, 4 }; 
@@ -142,20 +151,23 @@ int b[][] = {
 {1,2},
 {3,4}
 }
+```
 
-#** Mutable -> vari, immutable - > const
+**Mutable -> variable, immutable - > const**
 
 
-#** Data type String vs StringBuffer vs StringBuilder
+**Data type String vs StringBuffer vs StringBuilder**
 
-**String is primitive/predefined data type whether StringBuffer and StringBuilder are class define
+** String is primitive/predefined data type whether StringBuffer and StringBuilder are class define
 StringBuffer and StringBuilder has more flexibility to update like reverse(), capacity etc
 StringBuffer is useful in case of threading.
 
-** Integer vs int :
+**Integer vs int :**
+
 Integer is class drive or wrapper class of int, Integer has more flexibility.  
  
-#** chaining call of constructor
+**chaining call of constructor**
+```
 class TestClass {
    String name;
    int age;
@@ -192,9 +204,10 @@ class TestClass {
    }
 
 }
+```
 
-#** Inheritance example
-
+## Inheritance example
+```
 public class TestInheritance extends Car {
    public static void main(String[] args) {
        // can't call static class to non static class, need to static
@@ -220,5 +233,6 @@ class Car {
        System.out.println("car Run");
    }
 }
+```
 
 
