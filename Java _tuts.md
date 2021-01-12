@@ -232,7 +232,21 @@ class Car {
    public void carRun() {
        System.out.println("car Run");
    }
-}
+
 ```
+**Sting pool is kind of memory allocation**
+**String is blue print of array, store in array that why it's non-primitive**
+**if we update it's save in heap memory**
+
+```
+Sting s1 = "test"; // save in stack memory
+s1="test1"; // save in heap memory
+
+```
+## String vs String Buffer vs StringBuilder :
+
+- String take less memory but give less option.
+- String buffer has more option like, replace,reverse rather than string, most case use in threads, but slow.
+- StringBuilder is good option than String, option like, replace, reverse but its is not useful in threads. 
 
 
