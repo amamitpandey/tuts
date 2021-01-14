@@ -317,7 +317,7 @@ finalVar updated 20
 
 
 ``` 
-## Asbstact 
+## Asbtract 
 
 Abstract data means hide data what required just give same thing, like doctor required only name and age, not educational details
 **interface is 100% abstract**
@@ -349,4 +349,4 @@ class TestAbstractionClass extends AsbtractClass{
 is a like a capsule,container catain many chemical, element and serve all at a time.
 Getter, setter is good example of encapsulation. Access modifier are makes role for data security.
 
-## Inerface
+## Interface
