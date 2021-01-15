@@ -350,3 +350,38 @@ is a like a capsule,container catain many chemical, element and serve all at a t
 Getter, setter is good example of encapsulation. Access modifier are makes role for data security.
 
 ## Interface
+
+is a specification/structure, work as a inheritace.
+
+```
+interface Vehicle extends BMW,Plan{
+    default public void drive(String name){
+        System.out.println("drive name"+name);
+    }
+}
+
+interface BMW {
+    public void drive(String name);
+}
+
+interface Plan {
+    int wheels= 10;
+    default String returnName(String name){
+        System.out.println("returnName "+name);
+        return name;
+    }
+}
+
+in main()
+...
+        TestInheritance vehicle = new TestInheritance();
+        System.out.println("checking interface "+ vehicle.wheels);
+        vehicle.drive(" fgf");
+        vehicle.returnName("returnName");
+...
+
+//output
+checking interface 10
+drive name fgf
+returnName returnName
+```
