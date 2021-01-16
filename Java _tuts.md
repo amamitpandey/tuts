@@ -385,3 +385,9 @@ checking interface 10
 drive name fgf
 returnName returnName
 ```
+
+## importing one package to another
+import com.test.* // calling all classes within this package
+import com.test.specificClass
+
+
