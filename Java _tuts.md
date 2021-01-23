@@ -390,4 +390,62 @@ returnName returnName
 import com.test.* // calling all classes within this package
 import com.test.specificClass
 
+## Error handler
+- checked, at compilation type
+- unchecked, at runtime
+- error, at runtime
 
+**to handle runtime error, can use try and catch or throws an throw**
+
+### Try and catch
+
+```
+    int devider = 25, devident = 0;
+
+    public static void main(String[] args)  {
+        ErrorHandlerTest errorHandlerTest = new ErrorHandlerTest();
+        errorHandlerTest.usingTryCatch();
+        ...
+        
+        
+            public void usingTryCatch() {
+        try {
+            System.out.println("print int try block " + devider / devident);
+        } catch (Exception e) {
+            System.out.println("print int catch block " + e);
+        }
+    }
+    
+```
+
+### throws and throw
+
+```
+    int devider = 25, devident = 0;
+
+    public static void main(String[] args)  {
+        ErrorHandlerTest errorHandlerTest = new ErrorHandlerTest();
+        try {
+            errorHandlerTest.usingUnhandleException();
+            errorHandlerTest.usingTryThrowsAndThrow();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("main exception " + e);
+        }
+    }
+    
+    private void usingUnhandleException() throws InterruptedException {
+        Thread.sleep(10000);
+        System.out.println(" usingUnhandleException ");
+    }
+
+    private void usingTryThrowsAndThrow() throws Exception{
+        if (devident == 0) {
+            System.out.println("main exception 1--"+ devident );
+            // it's like a return statement, after it nothing excute 
+            throw new Exception(" Run time error");
+        }
+    }
+    
+  ```
+  
