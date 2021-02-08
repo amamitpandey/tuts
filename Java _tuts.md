@@ -448,4 +448,13 @@ import com.test.specificClass
     }
     
   ```
+  ## Singletone design
+  
+  - use for create only one instance 
+  - use private constructor 
+  - by default it generate on instance in jvm, if required or not
+  
+  - https://www.geeksforgeeks.org/java-singleton-design-pattern-practices-examples/
+  - https://dzone.com/articles/singleton-in-java
+  
   
