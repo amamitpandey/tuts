@@ -42,6 +42,7 @@ Need to test job, step execution, file read, write things
 Mocking: use for a complex object, external things. it's try copy like real thing and replace with fake object. Mocking means we are declaring a duplicate like method, service etc. and guide what could be output if this method called without calling that method.
 
 BDD: Behavior driven development, is a idea use test in a simple way like //given..//when...//then. it's combo of tdd and genaral techniech.
+
 TDD: Test driven development, idea is first write test and pass it later by writing the code, it's a agile pratice.
 
-Stubing: means use minimal/ignore steps many thing like we use fake like jwt token.
+Stubing: same like a dummy data/method, use static return type like we use fake like jwt token.
