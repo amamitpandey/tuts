@@ -1,5 +1,5 @@
 ## Basic sentance: 
- Sub + perdicate(verb+object) ex: Ram ate rice, sub:Ram, verb:ate, obj:rice, Prodicate(ate rice)
+ Sub + perdicate(verb+object) ex: Ram ate rice, sub:Ram, verb:ate, obj:rice, perdicate(ate rice)
 ## Noun: Person, place, thing(pen), animal, feeling(love,anger)
  Another thype of noun: Singular & plular, add e, es, ies(remove y and add ies lile charry->charries)
 ## Verbs: actions(run,eat)(main verb)
