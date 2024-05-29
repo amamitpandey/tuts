@@ -25,3 +25,39 @@ Part of speech: noun, pronoun, verb, adjective, adverb, preposition, conjunction
 ## Conjuction: Join two sentence 
 Remember tips: FANBOYS(For,And, Nor,But,Or,Yet,So), Another conjuctions are: Since, either...or etc
 
+## Singular & Pular
+             Singular         Pular
+1st person    I                We
+2nd person    You              You
+3rd person    he,she,her,name  They, names
+
+Generally we add s, es to make singular to pular. for verbs likes ending with O,S, CH, SH, X add -es like wash -> washes. 
+These considers as sigular: each, each one, either...or, niether...nor, everyone, everybody, anyone, anybody, nobody, somebody, someone, no one.
+Ex: No one wants work 16 hours
+Either he or his brother needs to contact.
+
+Consider which sub is closer: 
+1.Either teacher or students write homework -> here students is consider as a 2nd person subj
+2.Either students or teacher writes homework -> here teacher is consider as a 1st person subj
+
+Collective noun like group, team, family are consider as singular
+  ex: My team is big.
+Pular words, always use a pular helping verbs like are,were.
+Some time we take sub at the end of the sentence
+Ex: There is one person -> one person is singular so used is as a singular helping verb
+    There are two persons -> two persons are p[ular so used are as a pular helping verb
+
+## Simple tense
+Identification: in hindi(Ta,te,ti)
+                happens all time
+                happens repeatedly, daily basis
+                is true in general 
+## Simple Past
+
+
+
+         
+
+
+
+
