@@ -47,12 +47,20 @@ Some time we take sub at the end of the sentence
 Ex: There is one person -> one person is singular so used is as a singular helping verb
     There are two persons -> two persons are p[ular so used are as a pular helping verb
 
-## Simple tense
+## Simple Present tense
 Identification: in hindi(Ta,te,ti)
                 happens all time
                 happens repeatedly, daily basis
                 is true in general 
-## Simple Past
+## Simple Past tense
+## Simple future tense
+Older time we use shall with I and We but now a days we use for only suggestion.
+ex: shall we go?
+## future continous: 
+doing something in define time.
+ex: Tomorrow I'll be cokking food. I'll be going market.
+
+
 
 
 
