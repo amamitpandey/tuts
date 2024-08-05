@@ -1,6 +1,7 @@
 # WireMock
 some examples:
 https://wiremock.org/docs/stubbing/
+
 https://github.com/codefarm0/WireMock/tree/master/ticketbookingservice
 
 ## to generate a static response for testing, outside the application.
