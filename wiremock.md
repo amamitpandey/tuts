@@ -21,7 +21,7 @@ Steps
     "status": 200,
     "body": "Hello, world!",
     "headers": {
-        "Content-Type": "text/plain"
+        "Content-Type": "application/json"
     }
   }
 }
