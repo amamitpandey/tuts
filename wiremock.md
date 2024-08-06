@@ -30,3 +30,4 @@ Steps
 5. test default api from postman or browser: localhost:8080/randomApiName
 6. test on diffrent $ java -jar /path/wirwmock.jar -port=8081
 7. using queryParamtertes .* we can accept any argument
+8. use "jsonBody" for save json data
