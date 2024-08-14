@@ -457,4 +457,17 @@ import com.test.specificClass
   - https://www.geeksforgeeks.org/java-singleton-design-pattern-practices-examples/
   - https://dzone.com/articles/singleton-in-java
   
-  ## 
+  ## Solid priciple
+  S: Single responsibility principle
+  O: Open-close principle
+  L: Liskov Substitution principle
+  I: interface segregation principle
+  D: Dependency inversion principle
+
+  Open-close Principle: Open to extend but close for modification, extend old and base class.
+  Liskov substitution: Should be loosely couple, any time class can be remove sustitude code.
+  Interface segregation principle: Keep interface small as possible, that can use anywhere, like conversion of data type.
+  Dependecy inversion principle: Should be loosely couple, use dependecy injection instead of creating a new instance.
+  
+  
+  
