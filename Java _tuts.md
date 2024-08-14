@@ -26,7 +26,7 @@ public class CustomeClass {
        System.out.println("consoling in Custom class main");
        // to call a static method don't need to create instance
        StaticMethod();
-       // to call a static method need to create instance
+       // to call a non static method need to create instance
        // first call call then obj or method
        CustomeClass customeClassObj = new CustomeClass();
        customeClassObj.NonStaticMethod();
