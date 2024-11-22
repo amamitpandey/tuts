@@ -59,7 +59,13 @@ ex: shall we go?
 ## future continous: 
 doing something in define time.
 ex: Tomorrow I'll be cokking food. I'll be going market.
-
+## Present participle: 
+Verb use a adjective
+a. after verbs of movement and position
+ex: she went(verb) shopping
+b. after verbs of perception in pattern. verb+obj+present_paticiple, indicate the action perceived.
+ex: we saw(verb) him(obj) moving(present participle)
+we heard someone singing(participle).
 
 
 
