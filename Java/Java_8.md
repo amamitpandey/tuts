@@ -1,19 +1,22 @@
-Java 8 features
-Lambda expression:
+# Java 8 features
+### Lambda expression:
  in java 8, for concise the code we use lambda expression, when we using this we need to implement it through a functional interface. Functional interfaces implement a single abstraction method(SAM).  
 
-Anonymous function :
+### Anonymous function :
 no access modifier, no name, no castType, no signature and optional return type.
   
-Functional interface(FI) : 
+### Functional interface(FI) : 
 Ex : 
 Runnable() ⇒ run()
+
 Callable() => call()
+
 Comparator => compareTo()
+
 ActionLister ⇒ actionPerformed()
 
-# In interface or functional interface, we can use default and static method.
-# @functionalInterface // for check Functional interface, it’s optional.
+#### In interface or functional interface, we can use default and static method.
+* @functionalInterface // for check Functional interface, it’s optional.
 
 ```
 class TestClass {
@@ -34,6 +37,7 @@ interface MyInterface {
 
 // using thread with lambda expression
 
+```
 public static void main(String[] args) {
    Runnable runnable = () -> {
        for (int i = 0; i < 5; i++) {
