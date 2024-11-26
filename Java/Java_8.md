@@ -1,4 +1,19 @@
 # Java 8 features
+
+1.Lamda expression
+2.stream api
+3.funtional interface
+4.default method in interface
+5.static method in interface
+6.predicate
+7.function
+8.consumer
+9.method refrence & construtor reference by double colon(::) oprator 
+10.date & time api
+
+## Benefit: 
+reduce the code, accept funtion concept, improve performace by using new hardware like octo processer.
+
 ### Lambda expression:
  in java 8, for concise the code we use lambda expression, when we using this we need to implement it through a functional interface. Functional interfaces implement a single abstraction method(SAM).  
 
