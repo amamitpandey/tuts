@@ -70,17 +70,20 @@ Stream API :
 For processing the data, like file, modify data we use stream api.
 
 Intermediate Operations:
-map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.
+<br />
+map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.<br />
 List number = Arrays.asList(2,3,4,5);
 List square = number.stream().map(x->x*x).collect(Collectors.toList());
-filter: The filter method is used to select elements as per the Predicate passed as argument.
+<br />
+filter: The filter method is used to select elements as per the Predicate passed as argument.<br />
 List names = Arrays.asList("Reflection","Collection","Stream");
 List result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toList());
-sorted: The sorted method is used to sort the stream.
+<br />
+sorted: The sorted method is used to sort the stream.<br />
 List names = Arrays.asList("Reflection","Collection","Stream");
 List result = names.stream().sorted().collect(Collectors.toList());
-
-Terminal Operations:
+<br />
+Terminal Operations:<br />
 collect: The collect method is used to return the result of the intermediate operations performed on the stream.
 List number = Arrays.asList(2,3,4,5,3);
 Set square = number.stream().map(x->x*x).collect(Collectors.toSet());
