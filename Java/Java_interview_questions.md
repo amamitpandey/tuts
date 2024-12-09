@@ -23,6 +23,8 @@ In java it's automatic but in C manually handle it, so Java is better in this ca
 11. What is the diamond problem in interface.
 12. What if 2 interface having the same default method is implemented by a same class?
 13. What is the Aggregation and Association in Java?
+14. Diamond problem, same kind of two interface?
+    
 
 
 Java 8
