@@ -1,0 +1,37 @@
+## IAM: Identity and access mangment(kind of use type)
+
+## Six advantange of cloud:
+1. flexibility/scalibility
+2. cost effective
+3. availability 
+4. suitable for agile, testing, rapid deployment
+
+
+
+## IASS - Infra as a service
+## PASS - Platform as service
+## SAAS - Software as a service
+cost is decrease from up to down
+
+## AWS Region:
+How to choose:
+1. Depend how close it is
+2. goverment policy like france
+3. privacy
+### in a region we can have multiple data centre 
+### different region have deffent timing and pricing 
+
+### PASS: Application + data, ex: AWS EC2
+### IAAS: Application + data + runtime + middleware + OS, ex: ELSTIC, google app engine 
+### SAAS: all things manage by plateform ex: gmail, dropbox, zoom
+
+### AWS pricing = compute(time)+stroage+data out
+
+# Security managed by shared resposibilty model
+# IAM - CG -apande8/CG@1.....7, admin access 
+
+## To create a user: Search IAM-> go to user and create->create a group and add permision -> add user in that group -> enable console by giving permission. 
+
+see tuts fornext steps
+
+
