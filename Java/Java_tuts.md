@@ -57,6 +57,11 @@ public class CustomeClass {
 - Synchronised - threads work parallelly to make them work sync, use these keywords.   
 - Volatile - maximum time variable use cache data, to use recent data of var we use these keywords.
 
+  Final: can't change the value, it should be used in same class, inheritance benefit can't be used. usually it's not preffred. used only for privacy purpose. only final 
+  var and method used by in same final class, not external class can use.
+  Static: can't change the value by interharitace, we can take benifit of inheritace by calling by another class and method. generally using for memory sharing, can be 
+  clone or copy object/method.
+
 ## primitive and non-primitive
 
 Primitive is predefined data type like - String, int, double.
