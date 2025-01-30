@@ -61,7 +61,7 @@ public class CustomeClass {
   var and method used by in same final class, not external class can use.
   
   Static: can't change the value by interharitace, we can take benifit of inheritace by calling by another class and method. generally using for memory sharing, can be 
-  clone or copy object/method.
+  clone or copy object/method. We use static final for class declaration.
 
 ## primitive and non-primitive
 
