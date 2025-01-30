@@ -425,6 +425,8 @@ import com.test.specificClass
 
 ### throws and throw
 
+- throws used to wirte with method signature while throw write inside of method.
+
 ```
     int devider = 25, devident = 0;
 
