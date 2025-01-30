@@ -56,12 +56,7 @@ public class CustomeClass {
 - Abstract - calling an existing method of super call in sub call,need to declare both sub class and method as abstract.   
 - Synchronised - threads work parallelly to make them work sync, use these keywords.   
 - Volatile - maximum time variable use cache data, to use recent data of var we use these keywords.
-
-  Final: can't change the value, it should be used in same class, inheritance benefit can't be used. usually it's not preffred. used only for privacy purpose. only final 
-  var and method used by in same final class, not external class can use.
-  
-  Static: can't change the value by interharitace, we can take benifit of inheritace by calling by another class and method. generally using for memory sharing, can be 
-  clone or copy object/method. We use static final for class declaration.
+  See below for diffrence between final and static, usually used with both static fineal
 
 ## primitive and non-primitive
 
@@ -287,12 +282,16 @@ like this refer current method or current class, like super refer just parent cl
  ```
  ## final keyword
  - final class/variable can't modify, same or from another class 
- - final class are not extendble
- - final method can't override
+ - final class are not extendble/inheritance 
+ - final method can't override/update
+ - can't use by another class, used only in same class
+ - Preffered for more security otherwise not reccomended 
  
  ## final vs static
  - in same same class can't modify
  - from another class static variable are modifilable but final can't.
+ - Static used for memory sharing, it'll create a new/copy a object and work
+ - Static use take adavantage of inheritance. 
  
  ```
 public class TestInheritance extends Car {
