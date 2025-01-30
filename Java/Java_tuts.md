@@ -472,8 +472,11 @@ import com.test.specificClass
   D: Dependency inversion principle
 
   Open-close Principle: Open to extend but close for modification, extend old and base class.
+  
   Liskov substitution: Should be loosely couple, any time class can be remove sustitude code.
+  
   Interface segregation principle: Keep interface small as possible, that can use anywhere, like conversion of data type.
+  
   Dependecy inversion principle: Should be loosely couple, use dependecy injection instead of creating a new instance.
   
   
