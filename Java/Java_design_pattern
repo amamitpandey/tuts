@@ -1,11 +1,12 @@
 Java design pattern is a solution template of some problems which generally occur while coding.
-As category it's devided in three part: Creational design pattern, stuctrual, behavior design pattern
+As category it's devided in three part: Creational design pattern, stuctrual, behavior design pattern.
+there are 23 type of design pattern, it depend on requiremnt which can use, don't use all in same times.
 
 #1. Creational design pattern
-a. Singalton: every instace is create a single time or once, it's means it stop creating duplicate instance. at time of decalare use static and private key to do this. 
+a. Singalton: every instace is create a single time or once, it's means it stop creating duplicate instance. at time of decalare use static and private key to do this. update of parent class obj is not allowed
 it save obj in cache memoryand use multiple times. by using @bean, @Component in spring boot, can be use this concept.
 example:
-
+b. factory design pattern: in this design pattern we compose/process a obj by using inheritance concept, sub class obj can we modify, we try to achive loose couple things.  
 
 #2. stuctrual 
 #3. behavior design pattern
