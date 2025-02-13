@@ -9,31 +9,42 @@ it save obj in cache memoryand use multiple times. by using @bean, @Component in
 example:
 
 ```
-public class Main {
+public class SingletonDesignPattern {
+    // to make single ton class follow two steps
+    // constructor should be private
+    // constructor should call once so only one obj should create
+
 
     public static void main(String[] args){
-        System.out.println("Print main fn _ 1: "+AbcSingleton.getCustInstance());
-        System.out.println("Print main fn _ 2: "+ AbcSingleton.getCustInstance()); 
-        // calling two times but creating instance once
-        // if it called twice value should be reassigned but its not, below output
-        // obj is reassigned
-        // Print main fn _ 1: 20
-        // Print main fn _ 2: 20
+        AbcSingleton obj1 = AbcSingleton.getCustInstance();
+        System.out.println("Print main fn _ 1: "+ obj1.hashCode());
+        AbcSingleton obj2 = AbcSingleton.getCustInstance();
+        System.out.println("Print main fn _ 2: "+ obj2.hashCode());
+        // calling two times but creating one instance
+        // if it called twice value but due to if cond only one instance added, below output
+        // same hashcode id means not created duplicate
+/*        obj is reassigned
+        Print main fn _ 1: 1828972342
+        Print main fn _ 2: 1828972342*/
     }
 
 }
 
 class AbcSingleton {
-    private static int obj=0; // private static, means not recreate obj, create only once
-    public static int getCustInstance(){
-        if (obj==0){
-            obj=20;
+    private static AbcSingleton obj=null; // private static, means not recreate obj from outside, create only once
+
+    private AbcSingleton(){
+    } // calling constructor with new key word means creating a new instance.
+
+
+    public static AbcSingleton getCustInstance(){
+        if (obj==null){ // if instance is already created it'll avoid creating new instance
+            obj= new AbcSingleton();
             System.out.println("obj is reassigned");
         }
         return obj;
     }
 }
-
 ```
 
 b. factory design pattern: in this design pattern we compose/process a obj by using inheritance concept, sub class obj can we modify, we try to achive loose couple things.  
