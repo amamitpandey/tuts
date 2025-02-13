@@ -1,4 +1,5 @@
-### Java design pattern is a solution template of some problems which generally occur while coding.
+### Java design pattern:
+is a solution template of some problems which generally occur while coding.
 As category it's devided in three part: Creational design pattern, stuctrual, behavior design pattern.
 there are 23 type of design pattern, it depend on requiremnt which can use, don't use all in same times.
 
