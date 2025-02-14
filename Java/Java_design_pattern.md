@@ -53,10 +53,13 @@ Code example:
 ```
 public class FactoryDesignPattern {
     public static void main(String[] args) {
-        client();
+        EmployeeFactory employeeFactory = new EmployeeFactory();
+        employeeFactory.client("web");
     }
-    static void client(){
-        String devType="web";
+}
+
+class EmployeeFactory{
+    static void client(String devType){
         Employee dev;
         if(devType.equals("web")){
             dev = new WebDevloper();
@@ -64,7 +67,6 @@ public class FactoryDesignPattern {
             dev = new AdroidDevloper();
         }
         dev.name();
-
     }
 }
 
@@ -85,6 +87,76 @@ class AdroidDevloper implements Employee{
     public void name() {
         System.out.println("this is AdroidDevloper");
     }
+}
+
+
+```
+C. Abstraction design pattern:
+we are adding extra layer of a interface or factory design pattern. its similar type of factory design pattern, try to achive loose couple. 
+
+Below code example:
+client call AbstractFactory and AbstractFactory will call AdroidDevloperFactory and WebDevloperFactory, so there are two factory and one additional layer
+
+Employee infterface is independeble, and based on requirment second factory call employee.
+
+
+```
+package AbstractionDesignPattern;
+
+public class AbstractDesignPattern {
+    public static void main(String[] args) {
+        // client want a android dev so factory prepare android dev
+        Employee employee1 = new AdroidDevloperFactory().chooseEmployee();
+        employee1.name();
+
+        // client want a web dev so factory prepare android dev
+        Employee employee2 = new WebDevloperFactory().chooseEmployee();
+        employee2.name();
+
+    }
+}
+
+class EmployeeFactory{
+    public Employee chooseFactory(AbstractFactory abstractFactory) {
+        return abstractFactory.chooseEmployee();
+    }
+}
+
+abstract class AbstractFactory{
+    abstract Employee chooseEmployee();
+}
+
+class AdroidDevloperFactory extends EmployeeFactory{
+
+    public Employee chooseEmployee() {
+        return new AdroidDevloper();
+    }
+}
+
+class WebDevloperFactory extends EmployeeFactory{
+
+    public Employee chooseEmployee() {
+        return new WebDevloper();
+    }
+}
+
+class WebDevloper implements Employee {
+
+    @Override
+    public void name() {
+        System.out.println("this is web developer");
+    }
+}
+
+class AdroidDevloper implements Employee {
+    @Override
+    public void name() {
+        System.out.println("this is AdroidDevloper");
+    }
+}
+
+interface Employee {
+    void name();
 }
 
 ```
