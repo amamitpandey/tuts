@@ -165,3 +165,7 @@ interface Employee {
 Based on code stucture or project structure, we deside the code pattern
 #3. behavior design pattern :
 this design pattern manage two object interaction behavior.  
+
+
+to be complete later..
+https://www.youtube.com/watch?v=D0d2TsfGY2E&list=PL0zysOflRCek8kmc_jYl_6C7tpud7U2V_&index=5
