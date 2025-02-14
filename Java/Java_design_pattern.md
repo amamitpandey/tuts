@@ -47,7 +47,49 @@ class AbcSingleton {
 }
 ```
 
-b. factory design pattern: in this design pattern we compose/process a obj by using inheritance concept, sub class obj can we modify, we try to achive loose couple things.  
+b. factory design pattern: in this design pattern we compose/process a obj by using inheritance concept, sub class obj can we modify, we try to achive loose couple things. 
 
-#2. stuctrual 
-#3. behavior design pattern
+Code example:
+```
+public class FactoryDesignPattern {
+    public static void main(String[] args) {
+        client();
+    }
+    static void client(){
+        String devType="web";
+        Employee dev;
+        if(devType.equals("web")){
+            dev = new WebDevloper();
+        }else {
+            dev = new AdroidDevloper();
+        }
+        dev.name();
+
+    }
+}
+
+interface Employee {
+    void name();
+}
+
+class WebDevloper implements Employee{
+
+    @Override
+    public void name() {
+        System.out.println("this is web developer");
+    }
+}
+
+class AdroidDevloper implements Employee{
+    @Override
+    public void name() {
+        System.out.println("this is AdroidDevloper");
+    }
+}
+
+```
+
+#2. stuctrual :
+Based on code stucture or project structure, we deside the code pattern
+#3. behavior design pattern :
+this design pattern manage two object interaction behavior.  
