@@ -1,0 +1,58 @@
+Shell script
+Bash script
+
+# -> hash
+! -> bang
+
+#! /bin/bash   // first line kind of import bash
+# comment section // comment by am
+
+cd //change directory
+pwd // present working directory
+echo “ for print out “
+read NAME // scanf for name var
+
+// for file section
+cat //  concat two line and show in terminal
+cat testfile.sh // for view
+nano  testfile.sh //for edit a file, crtl+o for save
+touch //for create new file
+less // concat two line and show in new windows terminal, crt+q exit from there
+./test.sh // for execute sh file
+
+ls -l // for full information
+ -rwxrwxrwx  1 pandey  staff  64 May 12 12:29 test.sh
+- // for file
+rwx // for first 3 pattern for user, next group, next for other
+cp copy_file_name copible_folder_path
+
+touch file.txt // for create new file
+mkdir folder_name // for create a folder
+
+chmod 777 file_name // change mode/ change permission
+chmod 775 -R folder_name // give permission including folder and all file exit in folder
+chmod +x file name // x-> execute, w-> write, r -> read 
+// 0-> nothing
+// 1 -> +x, execute
+// 2 -> +r
+// 4 -> w
+// 3 -> 1+2 -> r+x
+// 7 means all permission, 775 means all permission for user and group, read and write permission for others
+
+$ man +help // cli manual
+$ chown new_use_name file_name.txt // for change owner ship
+$ chown new_use_name:new_group_name file_name.txt // for change user and group name
+
+# system veriable
+echo "file name $0"
+echo " number of argument passed in singel quote $* "
+echo " number of argument passed in double quote $@ "
+echo " process no executing $$ "
+# echo " exit the terminal $?  "
+
+% ./test.sh "am pand"
+
+file name ./test.sh
+ number of argument passed in singel quote am pand 
+ number of argument passed in double quote am pand 
+ process no executing 5733 
