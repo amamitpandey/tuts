@@ -11,15 +11,15 @@ Because of this concept deployment became fast
 Development and deployment at the same time
 Planning -> documentation -> development -> testing -> review -> deployment
 
-In Scrum
-# PM plan and build business login
-# TL design in techwise and split and give module wise
-# developer develop and send a build to QA team 
-# Qa team test with test case and send to client for review   
+### In Scrum
+#### PM plan and build business login
+#### TL design in techwise and split and give module wise
+#### developer develop and send a build to QA team 
+#### Qa team test with test case and send to client for review   
 
 Product backlog : full business idea
 
-# Scrum 
+### Scrum 
 // most of compony follow this
 scrum components 
 * Sprint backlog(planning): a part of idea share in team
