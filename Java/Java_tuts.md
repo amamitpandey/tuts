@@ -14,6 +14,9 @@ JRE(Java runtime Environment ) = JVM + operating system + other run environment.
 **Java workflow**
 
 Java code -> compiler -> java byte code (.class) -> JVM(interpreter+JIT) -> OS -> run
+Code compile twice:
+1. first time compile while running JAVAC part of JRE
+2. Second time compile while JIT, JIT compile w.r.t OS and processer based. then code run at machine.
 
 ## Basic Java code
 
