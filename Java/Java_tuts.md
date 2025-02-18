@@ -458,16 +458,51 @@ import com.test.specificClass
     }
     
   ```
-  ## Singletone design
-  
-  - use for create only one instance 
-  - use private constructor 
-  - by default it generate on instance in jvm, if required or not
-  
-  - https://www.geeksforgeeks.org/java-singleton-design-pattern-practices-examples/
-  - https://dzone.com/articles/singleton-in-java
-  
-  ## Solid priciple
+## Thread:
+
+Summary of Thread States:
+New: Thread has been created but not yet started.
+Runnable: Thread is ready and waiting for the CPU to run.
+Blocked: Thread is blocked, waiting for a resource to be available.
+Waiting: Thread is waiting indefinitely for another thread's action.
+Timed Waiting: Thread is waiting for a specific time limit.
+Terminated: Thread has finished execution.
+
+```
+public class ThreadLifeCycleExample {
+    public static void main(String[] args) throws InterruptedException {
+        Thread t = new Thread(() -> {
+            try {
+                System.out.println("Thread running...");
+                Thread.sleep(2000); // Timed Waiting
+                System.out.println("Thread finished sleeping.");
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted.");
+            }
+        });
+
+        System.out.println("Thread state: " + t.getState());  // New
+        t.start();  // Moves to Runnable state
+        System.out.println("Thread state after start: " + t.getState());
+        
+        Thread.sleep(1000);  // Waits for 1 second
+
+        System.out.println("Thread state during execution: " + t.getState());  // Runnable or Timed Waiting
+        
+        t.join();  // Wait for thread to finish
+        System.out.println("Thread state after completion: " + t.getState());  // Terminated
+    }
+}
+```
+### difference between the methods sleep() and wait()
+
+wait: it belongs to obj, use for pause, throw InterruptedException when another thread try to run it, it's interrupable.
+
+Sleep: it belongs to class, use for delau in process, does not throw InterruptedException.
+
+### Singletone design
+
+## Solid priciple
   S: Single responsibility principle
   O: Open-close principle
   L: Liskov Substitution principle
