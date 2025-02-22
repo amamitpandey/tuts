@@ -1,17 +1,8 @@
 ## Java Questions
 
 
-### Garbage collection
-This process remove unused/unreachble variable or object from heap memory to inhance the app performace. it's automatic process.
-
-// can be remove two way
-  Major: remove heap memory from JVM
-  Minor: Remove obj for heap memory
-In java it's automatic but in C manually handle it, so Java is better in this case.
-
-### Explain SOLID principles
-
-
+1. Garbage collection - anwsered in java_tuts
+2.Explain SOLID principles
 3. What is executer?
 4. Explain the working of LinkedHashMap/Tree and HashSet
 5. What is the class loading order in Java.
