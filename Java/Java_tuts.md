@@ -500,6 +500,10 @@ wait: it belongs to obj, use for pause, throw InterruptedException when another 
 
 Sleep: it belongs to class, use for delau in process, does not throw InterruptedException.
 
+### Executor:
+Executor is a interface which manage or control thread, executor handle thread life cycle creating and terminating.
+there are twomethod submit() and shutdown();
+
 ## Solid priciple
   S: Single responsibility principle
   O: Open-close principle
@@ -559,4 +563,17 @@ Spring will support only Constructor Injection and Setter/Getter Injection.
 This process remove unused/unreachble variable or object from heap memory to inhance the app performace. it's automatic process.
 
 // can be remove two way Major: remove heap memory from JVM Minor: Remove obj for heap memory In java it's automatic but in C manually handle it, so Java is better in this case.
-  
+
+### class loading process:
+JVMuse to load by below process
+1. loading: try to load all package and libraries internal or external
+2. linking: in this process JVN try to preparation, varification and resolve, custome class or written class
+3. initialization: start the application.
+
+### class loading order:
+1. Bootstrap: add all basic libraries like Java.util, java.lang
+2. Extension class loader: add all external libraries in jre/lib/ext like feignclient
+3. application loader: it load all class written by coder
+4. custom class loader(optional): it add all additional classes like server config, DB config, or loose couple things.
+
+   
