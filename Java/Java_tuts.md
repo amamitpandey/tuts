@@ -500,6 +500,40 @@ wait: it belongs to obj, use for pause, throw InterruptedException when another 
 
 Sleep: it belongs to class, use for delau in process, does not throw InterruptedException.
 
+### Diamond problem:
+when we are using multiple inheritace using interface, this problem occur.
+suppose, there are two interface implemented by one impl class and both have same method, then it'll generate compilar error.
+to solve this issue either we can 1. override a method or use super keyword like interfaceName.super.methodName();
+
+```
+public class DiamondIssue {
+    public static void main(String[] args) {
+        left left = new left();
+        left.methodName();
+    }
+}
+
+interface InterfaceLeft{
+    default void methodName() {
+        System.out.println(" InterfaceLeft print");
+    }
+}
+interface InterfaceRight{
+    default void methodName(){
+        System.out.println(" right ");
+    }
+}
+
+class left implements InterfaceLeft,InterfaceRight{
+
+    @Override
+    public void methodName() {
+        //System.out.println("left class"); // override the menthod
+        InterfaceLeft.super.methodName(); // user super and default method concept
+    }
+}
+```
+
 ### Executor:
 Executor is a interface which manage or control thread, executor handle thread life cycle creating and terminating.
 there are twomethod submit() and shutdown();
