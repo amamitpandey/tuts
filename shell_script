@@ -56,3 +56,24 @@ file name ./test.sh
  number of argument passed in singel quote am pand 
  number of argument passed in double quote am pand 
  process no executing 5733 
+
+
+$0 -> for file name
+$1 to $9 -> get value from passed argument // ./test.sh argu1, $1 = argu1
+$@ -> get argument of double aquote // ./test.sh "argu1 agru2", $@ = argu1 agru2
+$* -> get argument of single aquote // ./test.sh 'argu1 agru2', $* = argu1 agru2
+$? -> exit
+
+operator
+-eq -> equal to -> [[ $a -ep $b ]]
+-ne -> not equal to -> [[ $a -ne $b ]]
+-gt -> gretear than -> [[ $a -gt $b ]]
+-lt -> less than -> [[ $a -lt $b ]]
+-ge -> gretear equal -> [[ $a -ge $b ]]
+-le -> less eqaul to -> [[ $a -le $b ]]
+
+! -> opposit
+-o -> or
+-a -> and
+-n -> non zero
+-str -> empty str
