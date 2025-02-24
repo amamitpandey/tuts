@@ -1,23 +1,41 @@
 # Java 8 features
 
-1.Lamda expression
-2.stream api
-3.funtional interface
-4.default method in interface
-5.static method in interface
-6.predicate
-7.function
-8.consumer
-9.method refrence & construtor reference by double colon(::) oprator 
-10.date & time api
-
 ## Benefit: 
-reduce the code, accept funtion concept, improve performace by using new hardware like octo processer.
+Reduce the code, accept funtion concept, improve performace by using new hardware like octo processer.
+
+1. Lamda expression
+2. funtional interface
+ * Funtion
+ * predicate
+ * consumer
+ * supplier
+3. stream api
+4. static method in interface
+5. default method in interface
+6. method refrence & construtor reference by double colon(::) oprator 
+7. date & time api
 
 ### Lambda expression:
  in java 8, for concise the code we use lambda expression, when we using this we need to implement it through a functional interface. Functional interfaces implement a single abstraction method(SAM).  
 
-### Anonymous function :
+ // using thread with lambda expression
+
+```
+public static void main(String[] args) {
+   Runnable runnable = () -> {
+       for (int i = 0; i < 5; i++) {
+           System.out.println(" runnable interface " + i);
+       }
+   };
+   Thread t = new Thread(runnable);
+   t.start();
+   for (int i = 0; i < 5; i++) {
+       System.out.println(" main method " + i);
+   }
+}
+```
+
+#### Anonymous function :
 no access modifier, no name, no castType, no signature and optional return type.
   
 ### Functional interface(FI) : 
@@ -49,24 +67,64 @@ interface MyInterface {
 }
 
 ```
+PreDefined functional interface :
+Present in java.util.funtion.*
 
-// using thread with lambda expression
+### Predicate : for check/test, it alway return boolean type true or false
+
+Predicate <Integer> p = (i)-> i%2==0;
+System.out.println("test case 1 "+ p.test(11)); // false
+System.out.println("test case 2 "+ p.test(10)); // true
+
+
+Predicate joining 
+// and(), 
+p1.and(p2).test(obj);
+//or(),
+p1.or(p2).test(obj);
+// negate() means !=
+
+### Function :
+it take input type and return type
+
+Function<inputDatatype, returnDataType>
 
 ```
-public static void main(String[] args) {
-   Runnable runnable = () -> {
-       for (int i = 0; i < 5; i++) {
-           System.out.println(" runnable interface " + i);
-       }
-   };
-   Thread t = new Thread(runnable);
-   t.start();
-   for (int i = 0; i < 5; i++) {
-       System.out.println(" main method " + i);
-   }
-}
+Function<Integer, String> f = (i1) -> {
+   if (i1 % 2 == 0)
+       return "prime no";
+   return "non prime no";
+};
+System.out.println("calling fn0 " + f.apply(10)); // calling fn0 prime no
+System.out.println("calling fn1 " + f.apply(11)); //calling fn1 non prime no
+// chaining them
+Function<Integer, Integer> f1 = (i2) -> i2 * i2;
+Function<Integer, Integer> f2 = (i2) -> i2 + i2;
+System.out.println(f1.andThen(f2).apply(2));// 8, run f1 then f2
+System.out.println(f1.compose(f2).apply(3));// 36, run f2 then f1
 ```
-Stream API :
+### Consumer :
+It’s only take/consume input,but not return type
+consumer<inputType>
+```
+Consumer<Integer> c = (i1) -> System.out.println("only print value "+i1);
+c.accept(23); //only print value 23
+
+```
+### Supplier :
+Not required any input but required return type for output considered as return type integer.
+
+```
+Supplier<Integer> s = () -> 5;
+System.out.println(s.get()); // 5
+
+```
+### BiPredicate :
+BiPredicate<Integer, Integer> bp = (a,b)->(a+b)%2 ==0;
+System.out.println("bp 0 "+ bp.test(10,20)); // bp 0 true
+System.out.println("bp 1 "+ bp.test(10,25)); // bp 1 false
+
+### Stream API :
 For processing the data, like file, modify data we use stream api.
 
 Intermediate Operations:
@@ -178,65 +236,7 @@ interface I1 {
    }
 }
 
-PreDefined functional interface :
-Present in java.util.funtion.*
-
-Predicate : for check/test
-
-Predicate <Integer> p = (i)-> i%2==0;
-System.out.println("test case 1 "+ p.test(11)); // false
-System.out.println("test case 2 "+ p.test(10)); // true
-
-
-Predicate joining 
-// and(), 
-p1.and(p2).test(obj);
-//or(),
-p1.or(p2).test(obj);
-// negate() means !=
-
-Function :
-Include input type and return type
-
-Function<inputDatatype, returnDataType>
-
-```
-Function<Integer, String> f = (i1) -> {
-   if (i1 % 2 == 0)
-       return "prime no";
-   return "non prime no";
-};
-System.out.println("calling fn0 " + f.apply(10)); // calling fn0 prime no
-System.out.println("calling fn1 " + f.apply(11)); //calling fn1 non prime no
-// chaining them
-Function<Integer, Integer> f1 = (i2) -> i2 * i2;
-Function<Integer, Integer> f2 = (i2) -> i2 + i2;
-System.out.println(f1.andThen(f2).apply(2));// 8, run f1 then f2
-System.out.println(f1.compose(f2).apply(3));// 36, run f2 then f1
-```
-Consumer :
-It’s only take input not return type
-consumer<inputType>
-```
-Consumer<Integer> c = (i1) -> System.out.println("only print value "+i1);
-c.accept(23); //only print value 23
-
-```
-Supplier :
-Not required any input but required return type for output considered as return type integer.
-
-```
-Supplier<Integer> s = () -> 5;
-System.out.println(s.get()); // 5
-
-```
-BiPredicate :
-BiPredicate<Integer, Integer> bp = (a,b)->(a+b)%2 ==0;
-System.out.println("bp 0 "+ bp.test(10,20)); // bp 0 true
-System.out.println("bp 1 "+ bp.test(10,25)); // bp 1 false
-
-
-Method reference and class reference 
+### Method reference and class reference 
 For code reusability
 
 Restriction : can’t pass value
@@ -264,6 +264,8 @@ public void nonStaticCustomMethod(){
 }
 
 ```
+
+
 
 
 ## Refrence: Durga soft: https://www.youtube.com/watch?v=f4QZ12wMQO8&list=PLd3UqWTnYXOk5KW5drfvORu0uS4n5LTGU
