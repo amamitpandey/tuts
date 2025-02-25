@@ -236,7 +236,9 @@ interface I1 {
    }
 }
 
-### Method reference and class reference 
+### Method reference and consturctor reference : 
+Method reference: is introduce in java 8, use with lamda expression, use for short code ex: (sysytem.out :: println)
+where consturctor reference, we use "new" keyword like StringBuilder::new.
 For code reusability
 
 Restriction : can’t pass value
