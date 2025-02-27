@@ -156,6 +156,39 @@ toArray
 min()
 max()
 
+##### Some example
+```
+       int[] ints = {1,2,33};
+        // converting array to stream
+        Arrays.stream(ints).forEach(System.out::println);
+        // converting arrayList to stream
+        List<Integer> list = Arrays.asList(1,3,3);
+        Comparator<Integer> integerComparator = (a,b) -> (b - a);
+        list.stream().sorted(integerComparator).collect(Collectors.toList());
+
+        // direct using stream to print 1 to 20
+        // seed means starting point
+        Stream.iterate(1,x->x+1).limit(20).forEach(System.out::println);
+
+        List<Integer> intArray = new ArrayList<>();
+        intArray.add(2);
+        intArray.add(5);
+        intArray.add(1);
+        intArray.add(0);
+        intArray.add(2);
+
+        Stream<Integer> data = intArray.stream().sorted();
+        System.out.println("Sorting array");
+        data.forEach(System.out::println);
+        System.out.println("Filtering even nos");
+        intArray.stream().filter(x->x%2==0).sorted().forEach(System.out::println);
+        System.out.println("getting distinct");
+        intArray.stream().distinct().forEach(System.out::println);
+        System.out.println("processing data using map");
+        List<Integer> integers = intArray.stream().map(x->x*3).collect(Collectors.toList());
+        integers.forEach(System.out::println);
+        // we can use filter instead of supplier, consumer, predicate
+```
 Using filter :
 ```
 ArrayList<Integer> al = new ArrayList<Integer>();
