@@ -620,4 +620,9 @@ JVMuse to load by below process
 3. application loader: it load all class written by coder
 4. custom class loader(optional): it add all additional classes like server config, DB config, or loose couple things.
 
+### Java 17 benefit:
+1. update JVM and garbage collection to improve compile, building and compile time.
+2. interface is updated with sealed class
+3. introduce with records and Pattern matching.
+4. as normal we see it's enhance the performance, sercurity and LTS(long term support) time.
    
