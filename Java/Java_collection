@@ -1,6 +1,12 @@
-# Java collections
+## Java collections
+Holding data like an array, we use collections frameworks. Here we have more control than arrays.
+Array fixed in size that wise performance wise good but less control in terms of sort and another operation.
+Array contains hemogenous(one data type) while ArrayList/collection contain hetrogenous.
+in arrayList, we get more method for oprations like add(), addall(), reoveFirst(), removeLast().
 
-holding data like an array, we use collections frameworks. Here we have more control than arrays. Array fixed in size that wise performance wise good but less control in terms of sort and another operation.
+collection: is a interface, used to represent a group of variable as single Entity.
+collections: is a class, use for serch, retreive etc.
+
 
 ## There are 9 keys in collections.
 
