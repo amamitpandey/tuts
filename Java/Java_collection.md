@@ -21,13 +21,13 @@ SortedMap
 NavigableMap
 
 ## collection(Interface)(1.2 v)
-List (Duplicate & indexing allowed)(1.0)
+### List (Duplicate & indexing allowed)(1.0)
 -- ArrayList(1.2v)
 -- LinkedList(1.2)
 -- vector(1.0)(legacy list)
---- stack (part of vector)
+    --- stack (part of vector)
  
-Set (Duplicate & indexing not allowed)(1.2)
+### Set (Duplicate & indexing not allowed)(1.2)
 	-- HashSet (1.2)
 		-- LinkedHashSet(1.4)
 	-- SortedSet(indexing allowed)(1.2)
@@ -38,7 +38,8 @@ Set (Duplicate & indexing not allowed)(1.2)
 	-- BlockingQueue
 		-- PriorityBlockingQueue
 		-- LinkedBlockingQueue
-  -   Map(I)(use KayPair)(1.2)
+    	
+## Map(I)(use KayPair)(1.2)
 -- HashMap
 -- LinkedMap
 -- WeakHashMap
