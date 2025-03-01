@@ -28,18 +28,18 @@ NavigableMap
     --- stack (part of vector)
  
 ### Set (Duplicate & indexing not allowed)(1.2)
-	-- HashSet (1.2)
-		-- LinkedHashSet(1.4)
-	-- SortedSet(indexing allowed)(1.2)
-		-- navigableSet(1.6)
+-- HashSet (1.2)
+   -- LinkedHashSet(1.4)
+   -- SortedSet(indexing allowed)(1.2)
+	-- navigableSet(1.6)
 		-- tree set(1.2)(heterogeneous data/ any data not allowed)
-   -	Queue(1.5)
-	-- PriorityQueue
-	-- BlockingQueue
-		-- PriorityBlockingQueue
-		-- LinkedBlockingQueue
+### Queue(1.5)
+-- PriorityQueue
+-- BlockingQueue
+   -- PriorityBlockingQueue
+   -- LinkedBlockingQueue
     	
-## Map(I)(use KayPair)(1.2)
+### Map(I)(use KayPair)(1.2)
 -- HashMap
 -- LinkedMap
 -- WeakHashMap
