@@ -6,6 +6,7 @@ in arrayList, we get more method for oprations like add(), addall(), reoveFirst(
 
 collection: is a interface, used to represent a group of variable as single Entity.
 collections: is a class, use for serch, retreive etc.
+collection framework: it contains group of interface, classes.
 
 
 ## There are 9 keys in collections.
