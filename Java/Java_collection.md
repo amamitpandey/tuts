@@ -4,10 +4,9 @@ Array fixed in size that wise performance wise good but less control in terms of
 Array contains hemogenous(one data type) while ArrayList/collection contain hetrogenous.
 in arrayList, we get more method for oprations like add(), addall(), reoveFirst(), removeLast().
 
-collection: is a interface, used to represent a group of variable as single Entity.
+collection: is a interface, used to represent a group of variable as single Entity, we used List, set, map in most of cases.
 collections: is a class, use for serch, retreive etc.
 collection framework: it contains group of interface, classes.
-
 
 ## There are 9 keys in collections.
 
@@ -20,57 +19,6 @@ Queue
 Map
 SortedMap
 NavigableMap
-
-# how HashMap works internally
-hashMap based on node
-
-
-node
-key
-value
-next()
-
-
-There are three method available
-equals(): compare key if found then replace otherwise replace
-hashcode() : return a reference/address/Integer where element is inserted.
-buckets(): node of array.
-
-Steps for insertion/replacement:
-Get index by using formula = hashcodeKey && (n-1)
-Use an equal method for compare key and index if not found insert otherwise replace. 
-If index is same but key is different than map with internal key
-
-Steps for retrieve data:
-Get the index, if key found in that index return value
-In index, value is not found then search for next(use next fn) and return value.   
-
-
-## Tuts refrence: Durga software(https://www.youtube.com/watch?v=rI3VkItC0eA&list=PLd3UqWTnYXOkVR3OR9UZGyEt9RFUbaTMZ)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## collection(Interface)(1.2 v)
 List (Duplicate & indexing allowed)(1.0)
@@ -491,7 +439,7 @@ class UseComparatorClass implements Comparator {
    }
 }
 // output = [10, 1, 0]
-
+```
 
 Comparable
 Comparator
@@ -880,3 +828,31 @@ for (String s : al) {
 }
 System.out.println("For exiting element " + Arrays.binarySearch(al, "a")); // 0 // if found, give +ve no with index
 System.out.println("For not exiting element " + Arrays.binarySearch(al, "z")); // -5 // if not
+
+# how HashMap works internally
+hashMap based on node
+
+
+node
+key
+value
+next()
+
+
+There are three method available
+equals(): compare key if found then replace otherwise replace
+hashcode() : return a reference/address/Integer where element is inserted.
+buckets(): node of array.
+
+Steps for insertion/replacement:
+Get index by using formula = hashcodeKey && (n-1)
+Use an equal method for compare key and index if not found insert otherwise replace. 
+If index is same but key is different than map with internal key
+
+Steps for retrieve data:
+Get the index, if key found in that index return value
+In index, value is not found then search for next(use next fn) and return value.   
+
+
+## Tuts refrence: Durga software(https://www.youtube.com/watch?v=rI3VkItC0eA&list=PLd3UqWTnYXOkVR3OR9UZGyEt9RFUbaTMZ)
+
