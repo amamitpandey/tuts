@@ -4,7 +4,7 @@ Array fixed in size that wise performance wise good but less control in terms of
 Array contains hemogenous(one data type) while ArrayList/collection contain hetrogenous.
 in arrayList, we get more method for oprations like add(), addall(), reoveFirst(), removeLast().
 
-collection: is a interface, used to represent a group of variable as single Entity, we used List, set, map in most of cases.
+collection: is a interface, used to represent a group of variable as single Entity, we used List, set, map in most of cases. It’s cloneable(I) and serializable(I) mean easy to transportable and copyable. 
 collections: is a class, use for serch, retreive etc.
 collection framework: it contains group of interface, classes.
 
@@ -39,7 +39,7 @@ NavigableMap
    -- PriorityBlockingQueue
    -- LinkedBlockingQueue
     	
-### Map(I)(use KayPair)(1.2)
+## Map(I)(use KayPair)(1.2)(not comes in collection)
 -- HashMap
 -- LinkedMap
 -- WeakHashMap
@@ -48,12 +48,9 @@ NavigableMap
 --- properties
 --- dictionary 
 
-Sorting : comparable and comparator
-Cursors : Enumerator, iterator, ListIterator // getting object one by one
-Utility class : Collections, Arrays
-
-
-
+## Sorting : comparable(default) and comparator(custmizable)
+## Cursors : Enumerator, iterator, ListIterator // getting object one by one
+## Utility class : Collections, Arrays
 
 *(heterogeneous data/ any data not allowed in treeSet and treeMap)
 *(only AL and vector use Random Access)
@@ -62,13 +59,7 @@ List l = Collections.synchronizedList(ArrayList arr);
 List l = Collections.synchronizedSet(Set s);
 List l = Collections.synchronizedMap(Map m);
 
-
-
-
-#Collection
-A group of objects, strings, for holding data as a single entity, we use collection.
-It’s cloneable(I) and serializable(I) mean easy to transportable and copyable. 
-Collections : a class which contains a group of collection is called. 
+## Collection
 
 Default method in collection
 .add(Object o)
@@ -86,10 +77,10 @@ Default method in collection
 Object[] a = c.toArray
 
 
-# List 
+## List 
 Is child interface of collection, duplicate and indexing allowed 
 
-ArrayList : it’s good for retrieving/getting data. Indexing and duplicate are allowed. Default size is 10. Use Random Access, means get 1 and last element at same time.
+### ArrayList : it’s good for retrieving/getting data. Indexing and duplicate are allowed. Default size is 10. Use Random Access, means get 1 and last element at same time.
 
 Worst case : need swift all elements for insertion or deletion time, so its takes a lot of time.   
 
@@ -116,7 +107,7 @@ List arr = new ArrayList();
 List arr = new ArrayList(int initialCapacity ); 
 List arr = new ArrayList(Collection c);
 
-Difference between ArrayList and Vector
+### Difference between ArrayList and Vector
 ArrayList
 Every method present in arrayList are non synchronized
 Work with multiple threads
@@ -128,10 +119,10 @@ At a time only one thread works
 Use one thread at a time, performance wise not good
 1.0 v 
 
-LinkedList
+### LinkedList
 Useful for if frequent operation is add and remove at middle or any where. Worse for retrieving data means return first fast but last element takes times. First object contain information of second object and third element contain info of third element and vice versa. 
 
-ArrayList vs LinkedList
+### ArrayList vs LinkedList
 
 ArrayList
 Good for retrieving data
@@ -278,13 +269,10 @@ remove(), set(), add()
 
 # Comparison of cursor
 
-
-
 Enumeration
 Iterator
 ListIterator
-Applicable for
-Only for legacy
+Applicable for Only for legacy
 universal
 List class
 Movement
@@ -321,12 +309,7 @@ Introduces version
 
 # Set
 HashSet :
-Is child interface of collection, 
-Best for searching
-duplicate allowed 
-indexing are not allowed.
-Best for sorting
-If duplicated found return false not exception
+Is child interface of collection, Best for searching duplicate allowed indexing are not allowed. Best for sorting, If duplicated found return false not exception
 
 ```
 //## initial constructor
@@ -444,10 +427,7 @@ class UseComparatorClass implements Comparator {
 
 Comparable
 Comparator
-For customized comparison
-Like for use stringBuffer, salary based sort
-By default compare inbuild
-Like int has ascending default natural sorting order, Comparator don’t use stringBuffer.
+For customized comparison Like for use stringBuffer, salary based sort, By default compare inbuild, Like int has ascending default natural sorting order, Comparator don’t use stringBuffer.
 Use comparTo()
 Use compare() and equals()
 Use for primitive data String, integer
@@ -522,7 +502,7 @@ System.out.println(t.pollLast());  // 5000
 System.out.println(t); // 2000,3000,4000
 
 
-#Map
+## Map
 used to represent a group of key-value pair objects, map does not come in collection interface, dictionary and properties are not a child of map. 
 Duplicate keys are not allowed but value allowed.
 Each value is called Entry objects.
@@ -622,7 +602,7 @@ m.put(I2, “I2”)
 sop(m) // {10 = I1, 10 = I2} 
 // inserted repeated value
 
-WeakHashMap:
+### WeakHashMap:
 As the name suggests it's a weak map. If the value of any key is null then the garbage collector removes that element but in case of any other map the garbage collector(gc) can’t.
 
 ```
