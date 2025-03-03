@@ -59,7 +59,7 @@ public class CustomeClass {
 - Abstract - calling an existing method of super call in sub call,need to declare both sub class and method as abstract.   
 - Synchronised - threads work parallelly to make them work sync, use these keywords.   
 - Volatile - maximum time variable use cache data and return old data, to use recent data of var we use these keywords. if we use multi thread and we want every thread updated value so use this. it'll not block current state. eg final volatile string s1="string";
-- enum: it's a class, use to save variable like string, integer, here we have some predefine fn to use condition, let say if we want return 1 for true and 0 for false.
+- enum: it's a class, use to save variable like string, integer, here we have some predefine fn to use condition, short for enumeration, it's only read only, don't have remove fn, let say if we want return 1 for true and 0 for false.
   generally we use for switch cases.
   ```
   enum condEnum{
