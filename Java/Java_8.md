@@ -128,26 +128,28 @@ System.out.println("bp 1 "+ bp.test(10,25)); // bp 1 false
 For processing the data, like file, modify data we use stream api.
 
 Intermediate Operations:
-<br />
+
 map: The map method is used to returns a stream consisting of the results of applying the given function to the elements of this stream.<br />
 List number = Arrays.asList(2,3,4,5);
 List square = number.stream().map(x->x*x).collect(Collectors.toList());
-<br />
-filter: The filter method is used to select elements as per the Predicate passed as argument.<br />
+
+filter: The filter method is used to select elements as per the Predicate passed as argument.
 List names = Arrays.asList("Reflection","Collection","Stream");
 List result = names.stream().filter(s->s.startsWith("S")).collect(Collectors.toList());
-<br />
-sorted: The sorted method is used to sort the stream.<br />
+
+sorted: The sorted method is used to sort the stream.
 List names = Arrays.asList("Reflection","Collection","Stream");
 List result = names.stream().sorted().collect(Collectors.toList());
-<br />
-Terminal Operations:<br />
+
+Terminal Operations:
 collect: The collect method is used to return the result of the intermediate operations performed on the stream.
 List number = Arrays.asList(2,3,4,5,3);
 Set square = number.stream().map(x->x*x).collect(Collectors.toSet());
+
 forEach: The forEach method is used to iterate through every element of the stream.
 List number = Arrays.asList(2,3,4,5);
 number.stream().map(x->x*x).forEach(y->System.out.println(y));
+
 reduce: The reduce method is used to reduce the elements of a stream to a single value.
 The reduce method takes a BinaryOperator as a parameter.
 List number = Arrays.asList(2,3,4,5);
@@ -156,68 +158,8 @@ toArray
 min()
 max()
 
-##### Some example
-```
-       int[] ints = {1,2,33};
-        // converting array to stream
-        Arrays.stream(ints).forEach(System.out::println);
-        // converting arrayList to stream
-        List<Integer> list = Arrays.asList(1,3,3);
-        Comparator<Integer> integerComparator = (a,b) -> (b - a);
-        list.stream().sorted(integerComparator).collect(Collectors.toList());
 
-        // direct using stream to print 1 to 20
-        // seed means starting point
-        Stream.iterate(1,x->x+1).limit(20).forEach(System.out::println);
-
-        List<Integer> intArray = new ArrayList<>();
-        intArray.add(2);
-        intArray.add(5);
-        intArray.add(1);
-        intArray.add(0);
-        intArray.add(2);
-
-        Stream<Integer> data = intArray.stream().sorted();
-        System.out.println("Sorting array");
-        data.forEach(System.out::println);
-        System.out.println("Filtering even nos");
-        intArray.stream().filter(x->x%2==0).sorted().forEach(System.out::println);
-        System.out.println("getting distinct");
-        intArray.stream().distinct().forEach(System.out::println);
-        System.out.println("processing data using map");
-        List<Integer> integers = intArray.stream().map(x->x*3).collect(Collectors.toList());
-        integers.forEach(System.out::println);
-        // we can use filter instead of supplier, consumer, predicate
-```
-Using filter :
-```
-ArrayList<Integer> al = new ArrayList<Integer>();
-al.add(2);
-al.add(4);
-al.add(3);
-al.add(7);
-al.add(10);
-List l = al.stream().filter(x -> x >= 7).collect(Collectors.toList());
-System.out.println(l);// [7,10]
-
-```
-Using comparator in Stream
-
-ArrayList<Integer> al = new ArrayList<Integer>();
-al.add(2);
-al.add(4);
-al.add(3);
-al.add(7);
-al.add(10);
-Comparator<Integer> c = (i1,i2)->(i1>i2)?-1:1;
-List l = al.stream().sorted(c).collect(Collectors.toList());
-System.out.println(l); // [10, 7, 4, 3, 2]
-
-```
-al.stream().forEach(System.out :: println); // for printing the obj
-```
-
-Anonymous Inner class:
+### Anonymous Inner class:
 A interface where we can rewrite/override interface code, it’s create new instant and within that we can write the code, e.g
 Runnable r = new Runnable(){
 ...
@@ -245,7 +187,7 @@ Thread t = new Thread(r);
 t.start();
 
 Default method and static method in interface :
-
+```
 class TestClass implements I1{
 
    public static void main(String[] args) {
@@ -268,7 +210,7 @@ interface I1 {
        System.out.println("staticMethod");
    }
 }
-
+```
 ### Method reference and consturctor reference : 
 Method reference: is introduce in java 8, use with lamda expression, use for short code ex: (sysytem.out :: println)
 where consturctor reference, we use "new" keyword like StringBuilder::new.
@@ -304,6 +246,82 @@ public void nonStaticCustomMethod(){
 
 
 ## Refrence: Durga soft: https://www.youtube.com/watch?v=f4QZ12wMQO8&list=PLd3UqWTnYXOk5KW5drfvORu0uS4n5LTGU
+
+## Code practice
+```
+        int[] intArray = {1,2,33,2};
+        List<Integer> intList = Arrays.asList(1,3,3);
+        List<Integer> intList1 = new ArrayList<>();
+        intList1.add(2);
+        intList1.add(5);
+
+        // converting array to stream
+        Arrays.stream(intArray).forEach(System.out::println);
+
+        Comparator<Integer> integerComparator = (a,b) -> (b - a);
+        // converting arrayList to stream
+        // sorting in desending order
+        intList.stream().sorted(integerComparator).collect(Collectors.toList());
+
+        // direct using stream to print 1 to 20
+        // seed means starting point
+        Stream.iterate(1,x->x+1).limit(20).forEach(System.out::println);
+
+        System.out.println("Filtering even nos");
+        intList1.stream().filter(x->x%2==0).sorted().forEach(System.out::println);
+        System.out.println("getting distinct");
+        intList.stream().distinct().forEach(System.out::println);
+        System.out.println("processing data using map");
+        List<Integer> integers = intList.stream().map(x->x*3).collect(Collectors.toList());
+        integers.forEach(System.out::println);
+
+        // we can use filter instead of supplier, consumer, predicate
+
+        //sum
+        System.out.println(intList.stream().mapToInt(x->x).sum());
+        System.out.println(Arrays.stream(intArray).sum());
+
+        // add two array
+        List<Integer> newStringList = new ArrayList<>();
+        newStringList.addAll(intList);
+        newStringList.addAll(intList1);
+        System.out.println("demo of merger two array");
+        System.out.println(newStringList);
+        System.out.println("adding two array by concat");
+        Stream.concat(intList.stream(), intList1.stream()).forEach(System.out::println);
+
+
+        // get second highest no
+        System.out.println(intList.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get());
+
+
+        // sort string based on string length
+        List<String> stringList = Arrays.asList("name0", "name111","name2");
+        stringList.stream().sorted(Comparator.comparing(String :: length)).forEach(System.out::println);
+
+
+        // common element between two array
+        List<String> stringList2 = Arrays.asList("name0", "name","name2");
+        stringList.stream().filter(stringList2 :: contains).forEach(System.out::println);
+
+
+        // reverse the words
+        stringList.stream().map(x->new StringBuffer(x).reverse()).forEach(System.out::println);
+
+        // reverse the array
+        IntStream.rangeClosed(1,intList.size()).map(i-> intList.get(intList.size()-i)).forEach(System.out::println);
+
+        // find the duplicates
+        final HashSet<Integer> set0 = new HashSet<>();
+        intList.stream().filter(x->!set0.add(x)).forEach(System.out::println);
+
+        // Create a stream to generate Fibonacci numbers
+        Stream.iterate(new int[]{0,1},f -> new int[]{f[1],f[0]+f[1]}) // Fibonacci logic: [a, b] -> [b, a+b]
+                .limit(10)
+                .map(f->f[0])
+                .forEach(System.out::println);
+
+```
 
 
 
