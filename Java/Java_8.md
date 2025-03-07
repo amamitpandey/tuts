@@ -314,12 +314,23 @@ public void nonStaticCustomMethod(){
         // find the duplicates
         final HashSet<Integer> set0 = new HashSet<>();
         intList.stream().filter(x->!set0.add(x)).forEach(System.out::println);
+        // find the duplicate word in string array
+        HashSet<String> sList = new HashSet<>();
+        stringList.stream().filter(x->!sList.add(x)).forEach(System.out::println);
 
         // Create a stream to generate Fibonacci numbers
         Stream.iterate(new int[]{0,1},f -> new int[]{f[1],f[0]+f[1]}) // Fibonacci logic: [a, b] -> [b, a+b]
                 .limit(10)
                 .map(f->f[0])
                 .forEach(System.out::println);
+        
+
+        // split a sentance and reverse the string array
+        String s1 = "My name is Amit";
+        String[] stringList1 = s1.split(" ");
+        IntStream.rangeClosed(1,stringList1.length).mapToObj(x->stringList1[stringList1.length-x]).forEach(System.out::println);
+
+
 
 ```
 
