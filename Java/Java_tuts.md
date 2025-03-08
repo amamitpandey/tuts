@@ -1,3 +1,4 @@
+
 # Java tuts
 
 **Benefit of java**
@@ -607,6 +608,12 @@ Spring will support only Constructor Injection and Setter/Getter Injection.
 This process remove unused/unreachble variable or object from heap memory to inhance the app performace. it's automatic process.
 
 // can be remove two way Major: remove heap memory from JVM Minor: Remove obj for heap memory In java it's automatic but in C manually handle it, so Java is better in this case.
+
+### Javabean:
+Mostly contains properties of variable, getter, setter. maintain by IOC, DI in spring
+state of bean: create, configure, use, and destroy.
+scope of bean: The rule is create a bean every time of request, available for all application and after using bean destroy the bean in scope. 
+
 
 ### class loading process:
 JVMuse to load by below process
