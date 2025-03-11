@@ -546,8 +546,8 @@ class left implements InterfaceLeft,InterfaceRight{
 ```
 
 ### Executor:
-Executor is a interface which manage or control thread, executor handle thread life cycle creating and terminating.
-there are twomethod submit() and shutdown();
+Executor is a framwork used by interface which manage or control thread, executor handle thread life cycle creating and terminating.
+there are two method submit() and shutdown();
 
 ## Solid priciple
   S: Single responsibility principle
