@@ -36,6 +36,21 @@ delivery service ->
 same as cherography but able to handle complex mupltiple process at a time, it handle as centrilize way, commanding all services.
 Disadvantage: it's tight couple because working as centralize way, need to write code mean need extra effort to implement. if this sys fail, sys won't work.
 
+## Event sorcing/event emitter:
+For every transaction, it'll create a event so it'll eassy to see the history and if fail then recap and fix the issue. means easy to debug and loosly coupled.
+e.g: 
+order create-> create a event
+payment confirmation -> create a event
+noticication -> nofity user, hotel and delivery boy
+if anything fail we can rollback.
+
+
+## CQRS: command query responsibilty segragation 
+Command(read) and Query(write), here we are divinding into two DB, one for insertion/updatation like RDBMS, second for reading purpose like NoSQL. due to for insertion, inserting many confidential info like SSN, ADHAR, full details. but for view pupose we don't need full info just summary is good.
+internally one event bus like azure bus to sync two DB. 
+
+
+
 
 
       
