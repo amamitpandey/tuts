@@ -611,7 +611,7 @@ This process remove unused/unreachble variable or object from heap memory to inh
 
 ### Javabean:
 Mostly contains properties of variable, getter, setter. maintain by IOC, DI in spring
-state of bean: create, configure, use, and destroy.
+State of bean: Instantiation(create by @component, @Service), DI(configure like autowired), Post-Initialization(setting all methid by @PostConstruct), Ready to use, and Destruction(by @preDestroy).
 scope of bean: The rule is create a bean every time of request, available for all application and after using bean destroy the bean in scope. 
 
 
