@@ -330,6 +330,49 @@ public void nonStaticCustomMethod(){
         String[] stringList1 = s1.split(" ");
         IntStream.rangeClosed(1,stringList1.length).mapToObj(x->stringList1[stringList1.length-x]).forEach(System.out::println);
 
+        //how to sort a object using java stream
+        List<CustomModel> custList = new ArrayList<>();
+        CustomModel customModel1 = new CustomModel();
+        customModel1.setId(1);
+        customModel1.setName("amit");
+        CustomModel customModel2 = new CustomModel();
+        customModel2.setId(5);
+        customModel2.setName("amit1");
+        custList.add(customModel1);
+        custList.add(customModel2);
+
+        Comparator<CustomModel> custModelComparator = Comparator.comparingInt(CustomModel :: getId).reversed(); // logic
+        custList.stream().sorted(custModelComparator).forEach(x-> System.out.println("id "+ x.getId()+" Name"+x.getName()));
+
+
+    }
+
+
+    static class  CustomModel{
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        int id;
+        String name;
+    }
+
+
+}
+
 
 
 ```
