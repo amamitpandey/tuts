@@ -222,7 +222,23 @@ class TestClass {
 ```
 
 
-**String pool is kind of memory allocation**
+## String pool:
+is kind of memory allocation area where string literal (a string enclosed in double quotes like "hello") stores. JVM checks if same string already there then just share the refferance to another varible and improve the perfomance and save the heap memory.
+
+```
+public class StringPoolExample {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = "Hello"; // This will refer to the same object as s1
+
+        System.out.println(s1 == s2); // Output: true (same reference)
+
+        String s3 = new String("Hello"); // Explicitly creates a new string object
+        System.out.println(s1 == s3); // Output: false (different reference)
+    }
+}
+```
+ 
 **String is blue print of array, store in array that why it's non-primitive**
 **if we update it's save in heap memory**
 
@@ -510,6 +526,9 @@ public class ThreadLifeCycleExample {
 wait: it belongs to obj, use for pause, throw InterruptedException when another thread try to run it, it's interrupable.
 
 Sleep: it belongs to class, use for delau in process, does not throw InterruptedException.
+
+### Thread pool:
+it's collection of thread worker, make sure fixed number of thread work parallel, no new thread create, instead of creating new assign task old thread to save memory and enhance the performance.  
 
 ### Diamond problem:
 when we are using multiple inheritace using interface, this problem occur.
