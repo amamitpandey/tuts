@@ -222,12 +222,12 @@ class TestClass {
 ```
 
 
-**Sting pool is kind of memory allocation**
+**String pool is kind of memory allocation**
 **String is blue print of array, store in array that why it's non-primitive**
 **if we update it's save in heap memory**
 
 ```
-Sting s1 = "test"; // save in stack memory
+String s1 = "test"; // save in stack memory
 s1="test1"; // save in heap memory
 
 ```
