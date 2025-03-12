@@ -1,11 +1,11 @@
-                                          Basic Angular
+##      Basic Angular
 
 Components
 ●	Template -> html/css
 ●	Class -> like starting form export/import class
 ●	Metadata -> Decorator ( like starting form @component,@injector)
 
-Interpolation
+## Interpolation
 Assign a Variable and Call by curly bracket
 
 TestName = ‘Amit’;
@@ -17,7 +17,7 @@ Call in html
 ** it’s also able to call Function, arithmetic operation etc
 
 
-Property Binding
+## Property Binding
 
 Calling a variable or class form ts file using [] (square bracket) like interpolation
 But interpolation only use string
@@ -54,7 +54,7 @@ ConditionerClassName={
    font-size: 20px;
 }
 
-Style Binding
+## Style Binding
 
 <div [style.color]="'green'"> test 3</div>
 <div [style.backgroundColor]="'green'"> test 4</div>
@@ -95,16 +95,16 @@ Template Reference Variables
 //passing input variable input field to ts variable
 
 
-Directive
+## Directive
 
 Is a html Special Attribute like *ngIf  ,*ngFor 
 
-#******************* ngIf *********************************#
+## ******************* ngIf *********************************#
 
 <p *ngIF=”testVar; else elseBlock”></p>
 <ng-template #elseBlock >   This Block is Hidden</ng-template>
 
-#******************* ngSwitch *********************************#
+## ******************* ngSwitch *********************************#
 
 <div *ngSwitchCase =”’red’”> this is red color</div>
 <div *ngSwitchCase =”’blue’”> this is blue color</div>
@@ -112,7 +112,7 @@ Is a html Special Attribute like *ngIf  ,*ngFor
 <div *ngSwitchDefault> this is default color</div>
 
 
-#******************* ngFor *********************************#
+## ******************* ngFor *********************************#
 
 
 <div  *ngFor=”let color of colors”>{{color}}</div>
@@ -123,13 +123,11 @@ Is a html Special Attribute like *ngIf  ,*ngFor
 // last , first ,even ,odd alway return true and false
 
 
-Dependency Injection(DI)
+## Dependency Injection(DI)
 
 ●	Dependency : Depend on external source or not creating itself
 ●	Injection : call or create a instant in constructor
-●	   
-●	 
-flexible, efficient, and robust, as well as testable and maintainable
+● flexible, efficient, and robust, as well as testable and maintainable
 Simply calling a class using it
 
 
