@@ -152,6 +152,62 @@ constructor(){
 Var var1= new Service();
 var1.className();
 }
-Some Angular Cli
+
+### Some Angular Cli
 
 ng build --prod --base-href http://localhost/projectName/dist/projectName/
+
+
+## Routing In Angular 6
+
+In route-module.ts
+
+const routes: Routes = [
+ {path: '',component: NewCmpComponent}, //set Default component like index.html 
+ {path: 'new-cmp',component: NewCmpComponent}, //go to  component without data localhost:4200/new-cmp
+
+
+ {path: 'second/:id',component: SecondComponent} ,//go to  component with data id=2
+Like localhost:4200/second/2 
+
+
+ {path: 'second',component: SecondComponent , children:[
+   {path:'profile' , component:ProfileComponent}
+ ]} , //go to  component with child
+Like localhost:4200/second/profile
+
+ {path: '**',component: SecondComponent},//go to  component if found false path wild card entry 
+
+];
+
+
+Router through html
+
+<button routerLink="second">goToSecond</button>
+<button routerLink="second/2">goToSecond</button> //with data
+
+
+Router TS 
+
+
+this.router.navigate(['second',{id:"am"}]); //with data
+this.router.navigate(['second'}]);
+
+Getting Data from TS
+import { Router ,ActivatedRoute} from '@angular/router';
+import { Location } from '@angular/common';
+import { Location } from '@angular/common';
+
+
+...
+console.log("SecondComponent Router",this.ActivatedRoute.snapshot.paramMap.get("id"));
+
+
+// to go back
+GotoBack(){
+   this.location.back();
+ }
+// set root or make home page in ionic4 or angular
+
+this.router.navigate([pageName], {replaceUrl: true})
+
