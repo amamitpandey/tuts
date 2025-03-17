@@ -41,6 +41,7 @@ NavigableMap
     	
 ## Map(I)(use KayPair)(1.2)(not comes in collection)
 -- HashMap
+	--- ConcurrentHashMap
 -- LinkedMap
 -- WeakHashMap
 -- IdentityHashMap
@@ -565,6 +566,11 @@ Key can null once,value can be null
 Key can not null,value can’t be null
 1.2
 1.0(Legecy)
+
+### ConcurrentHashMap:
+it's good for work with multi thread, don't block the thread, multi thread can work together.
+Inserting null objects is not possible in ConcurrentHashMap as a key or value.
+When you need atomic operations like putIfAbsent, remove, or replace to avoid race conditions.
 
 
 
