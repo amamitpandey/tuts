@@ -426,9 +426,8 @@ import com.test.* // calling all classes within this package
 import com.test.specificClass
 
 ## Error handler
-- checked, at compilation type
-- unchecked, at runtime
-- error, at runtime
+- checked, at compilation type ex: IOexception, FileNotFoundException, SQLexception
+- unchecked, at runtime ex: nullpointerexception, airthmeticexception
 
 **to handle runtime error, can use try and catch or throws an throw**
 
