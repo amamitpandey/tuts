@@ -596,8 +596,10 @@ public IntArgsTest(int[] n) { System.out.println(n[0]); };
 
 public static void main(String[] args) { int[] intArgs = new int[args.length]; for (int i : intArgs) { try { intArgs[i] = Integer.parseInt(args[i]); } catch (NumberFormatException e) { System.err.println("Failed trying to parse a non-numeric argument, " + args[i]); } } main(intArgs); } }
 
-# Can a constructor be made final, abstract in Java? 
-No, a constructor can’t be made final. A final method cannot be overridden by any subclasses.
+# Can a constructor be made final in Java? 
+No, by default constructor can’t be override. and final method cannot be overridden by any subclasses so there are no use of it.
+# Can a abstract method be made final in Java? 
+no, because final method or var cann't be override.
 # Can a constructor be made private in Java? 
 Yes, to prevent use in subclass, can’t create instant from outsider class, use in design singleton pattern. 
 # Type of polymorphism :
