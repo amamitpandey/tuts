@@ -249,7 +249,7 @@ public void nonStaticCustomMethod(){
 
 ## Code practice
 ```
-        int[] intArray = {1,2,33,2};
+int[] intArray = {1,2,33,2};
         List<Integer> intList = Arrays.asList(1,3,3);
         List<Integer> intList1 = new ArrayList<>();
         intList1.add(2);
@@ -280,6 +280,7 @@ public void nonStaticCustomMethod(){
         //sum
         System.out.println(intList.stream().mapToInt(x->x).sum());
         System.out.println(Arrays.stream(intArray).sum());
+        System.out.println(intList.stream().reduce(0,(a,b)->a+b)); // 0 is int so it'll return int otherwise return Optional[7]
 
         // add two array
         List<Integer> newStringList = new ArrayList<>();
@@ -306,7 +307,7 @@ public void nonStaticCustomMethod(){
 
 
         // reverse the words
-        stringList.stream().map(x->new StringBuffer(x).reverse()).forEach(System.out::println);
+        stringList.stream().map(word->new StringBuffer(word).reverse()).forEach(System.out::println);
 
         // reverse the array
         IntStream.rangeClosed(1,intList.size()).map(i-> intList.get(intList.size()-i)).forEach(System.out::println);
@@ -323,12 +324,15 @@ public void nonStaticCustomMethod(){
                 .limit(10)
                 .map(f->f[0])
                 .forEach(System.out::println);
-        
+
 
         // split a sentance and reverse the string array
         String s1 = "My name is Amit";
         String[] stringList1 = s1.split(" ");
         IntStream.rangeClosed(1,stringList1.length).mapToObj(x->stringList1[stringList1.length-x]).forEach(System.out::println);
+
+
+
 
         //how to sort a object using java stream
         List<CustomModel> custList = new ArrayList<>();
@@ -337,12 +341,42 @@ public void nonStaticCustomMethod(){
         customModel1.setName("amit");
         CustomModel customModel2 = new CustomModel();
         customModel2.setId(5);
-        customModel2.setName("amit1");
+        customModel2.setName("pandey");
+        CustomModel customModel3 = new CustomModel();
+        customModel3.setId(2);
+        customModel3.setName("amit");
         custList.add(customModel1);
         custList.add(customModel2);
+        custList.add(customModel3);
 
-        Comparator<CustomModel> custModelComparator = Comparator.comparingInt(CustomModel :: getId).reversed(); // logic
+        Comparator<CustomModel> custModelComparator = Comparator.comparingInt(CustomModel :: getId).reversed();
         custList.stream().sorted(custModelComparator).forEach(x-> System.out.println("id "+ x.getId()+" Name"+x.getName()));
+        // if same name as groupby
+        Map<String, List<CustomModel>> collect = custList.stream().collect(Collectors.groupingBy(CustomModel::getName));
+        collect.forEach((item,list)-> System.out.println("item: "+item+" count "+list.size()));
+
+        // Plindrome
+        String string1 = new String("madam");
+        System.out.println(IntStream.range(0, string1.length()).allMatch(i -> string1.charAt(i) == string1.charAt(string1.length() - i - 1)));
+
+        // max() && min()
+        System.out.println(intList1.stream().max(Integer::compareTo));
+        System.out.println(custList.stream().max(custModelComparator)); // with a custom model
+
+        // first no repeat word
+        System.out.println(string1.chars()// string to stream
+                .mapToObj(ch -> (char) ch) // convert string char
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(x->x.getValue()==1)
+                .map(x->x.getKey())
+                .findFirst().get()
+        );
+        // print count of each word
+        String string2 = new String("madam pandey");
+        System.out.println(Arrays.stream(string2.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting())));
+
 
 
     }
