@@ -582,7 +582,18 @@ there are two method submit() and shutdown();
   
   Dependecy inversion principle: Should be loosely couple, use dependecy injection instead of creating a new instance.
   
+## Interface vs abstraction class
+Interface:
+* don't have constuctor
+* only contain public and abstract method(without body) which can be override
+* support multiple inhritance by implement method
 
+Abstraction:
+* this behave like a class
+* it's has constructor
+* it's has all key access modifier like public, private
+* it may contain narmal method with body(concern method) and abstract method without body
+* don't support multi inhretance, just support single inhritance by extent keyboard. 
   
 # Using int Instead Of String: 
 public static void main (int[] args) : at starting jvm only accept String[]. If try than give - "please define the main method as: public static void main(String[] args)”
