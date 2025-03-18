@@ -74,8 +74,9 @@ Is just environment, scope where var method exit, can access by this keyword.
 # What are Bean Factory and Application Context?
 Can you compare Bean Factory with Application Context?
 
-# BeanFactory and ApplicationContext both are Java interfaces and ApplicationContext extends BeanFactory. Both of them are configuration using XML configuration files. 
-In short BeanFactory provides basic Inversion of control(IoC) and Dependency Injection (DI) features while ApplicationContext provides advanced features.
+# BeanFactory and ApplicationContext:
+both are spring container, ApplicationContext extends BeanFactory. BeanFactory provide basic and normal features and used in simple application.
+In short, BeanFactory provides basic Inversion of control(IoC) and Dependency Injection (DI) features while ApplicationContext provides advanced features.
 
 ## What’s the difference Between @Controller, @Component, @Repository, @SpringBootApplication and @Service Annotations in Spring?
 @component : it's bean, it's for general purpose, either we can use as repository, service or as mmodel for easy to use.
