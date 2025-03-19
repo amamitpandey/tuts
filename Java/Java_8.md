@@ -36,7 +36,7 @@ public static void main(String[] args) {
 ```
 
 #### Anonymous function :
-no access modifier, no name, no castType, no signature and optional return type.
+no access modifier, no name, no castType, no signature and optional return type. also called lamda expresion. 
   
 ### Functional interface(FI) : 
 Ex : 
@@ -49,7 +49,7 @@ Comparator => compareTo()
 ActionLister ⇒ actionPerformed()
 
 #### In interface or functional interface, we can use default and static method.
-* @functionalInterface // for check Functional interface, it’s optional.
+* @functionalInterface // for check Functional interface, it’s optional.it'll throw the error if found more abstract method
 
 ```
 class TestClass {
@@ -62,8 +62,13 @@ class TestClass {
    }
 }
 
+@functionalInterface
 interface MyInterface {
+   // by default interface has abstract method
    public int myOpreation(int a, int b);
+
+   // we can add more default method, optional
+  
 }
 
 ```
