@@ -379,12 +379,12 @@ class TestAbstractionClass extends AsbtractClass{
 }
 
 ```
-## Encapsulation 
+### Encapsulation 
 
 is a like a capsule,container catain many chemical, element and serve all at a time.
 Getter, setter is good example of encapsulation. Access modifier are makes role for data security.
 
-## Interface
+##@ Interface
 
 is a specification/structure, work as a inheritace.
 
@@ -567,7 +567,7 @@ class left implements InterfaceLeft,InterfaceRight{
 Executor is a framwork used by interface which manage or control thread, executor handle thread life cycle creating and terminating.
 there are two method submit() and shutdown();
 
-## Solid priciple
+### Solid priciple
   S: Single responsibility principle
   O: Open-close principle
   L: Liskov Substitution principle
@@ -582,7 +582,7 @@ there are two method submit() and shutdown();
   
   Dependecy inversion principle: Should be loosely couple, use dependecy injection instead of creating a new instance.
   
-## Interface vs abstraction class
+### Interface vs abstraction class
 Interface:
 * don't have constuctor
 * only contain public and abstract method(without body) which can be override
@@ -595,7 +595,7 @@ Abstraction:
 * it may contain narmal method with body(concern method) and abstract method without body
 * don't support multi inhretance, just support single inhritance by extent keyboard. 
   
-# Using int Instead Of String: 
+### Using int Instead Of String: 
 public static void main (int[] args) : at starting jvm only accept String[]. If try than give - "please define the main method as: public static void main(String[] args)”
 
 Alternative we can define another main :
@@ -606,25 +606,24 @@ public IntArgsTest(int[] n) { System.out.println(n[0]); };
 
 public static void main(String[] args) { int[] intArgs = new int[args.length]; for (int i : intArgs) { try { intArgs[i] = Integer.parseInt(args[i]); } catch (NumberFormatException e) { System.err.println("Failed trying to parse a non-numeric argument, " + args[i]); } } main(intArgs); } }
 
-# Can a constructor be made final in Java? 
+### Can a constructor be made final in Java? 
 No, by default constructor can’t be override. and final method cannot be overridden by any subclasses so there are no use of it.
-# Can a abstract method be made final in Java? 
+
+### Can a abstract method be made final in Java? 
 no, because final method or var cann't be override.
-# Can a constructor be made private in Java? 
+
+### Can a constructor be made private in Java? 
 Yes, to prevent use in subclass, can’t create instant from outsider class, use in design singleton pattern. 
-# Type of polymorphism :
+
+### Type of polymorphism :
 Overloading : method name will same but params will differ, if there is any mistake it’s give run time error.
 Overriding : method signature, name, parameter will same, it can be overwritten. Give compile time error.   
 
-# Loose coupling :
+### Difference between Inversion of Control & Dependency Injenction
 
- In simple words, loose coupling means they are mostly independent. If the only knowledge that class A has about class B, is what class B has exposed through its interface, then class A and class B are said to be loosely coupled. ... The examples of Loose coupling are Interface,DI
+Inversion of Control: is manage bean state to run the application with dependecy injenction use to archive loose coupling in java programming
 
-# Difference between Inversion of Control & Dependency Injection
-
-These are patterns to achieve loose coupling in java programming
-
-DI(Dependency Injection):
+### DI(Dependency Injection):
 Dependency injection is a pattern used to create instances of objects that other objects rely upon without knowing at compile time which class will be used to provide that functionality or simply the way of injecting properties to an object is called dependency injection.
 
 We have three types of Dependency injection
@@ -641,9 +640,9 @@ This process remove unused/unreachble variable or object from heap memory to inh
 // can be remove two way Major: remove heap memory from JVM Minor: Remove obj for heap memory In java it's automatic but in C manually handle it, so Java is better in this case.
 
 ### Javabean:
-Mostly contains properties of variable, getter, setter. maintain by IOC, DI in spring
-State of bean: Instantiation(create by @component, @Service), DI(configure like autowired), Post-Initialization(setting all methid by @PostConstruct), Ready to use, and Destruction(by @preDestroy).
-scope of bean: The rule is create a bean every time of request, available for all application and after using bean destroy the bean in scope. 
+* Mostly contains properties of variable, getter, setter. maintain by IOC, DI in spring
+* State of bean: Instantiation(create by @component, @Service), DI(configure like autowired), Post-Initialization(setting all methid by @PostConstruct), Ready to use, and Destruction(by @preDestroy).
+* scope of bean: The rule is create a bean every time of request, available for all application and after using bean destroy the bean in scope. 
 
 
 ### class loading process:
