@@ -1,8 +1,6 @@
 ## Java Questions
-
-
 1. Garbage collection - anwsered in java_tuts
-2.Explain SOLID principles
+2. Explain SOLID principles
 3. What is executer?
 4. Explain the working of LinkedHashMap/Tree and HashSet
 5. What is the class loading order in Java.
@@ -31,7 +29,7 @@ Java 8
 9. Memory management in Hashmap in java 8?
 10. ForEach vs enhanced forloops and normal for loops.
 11. What is the benefit of default and static methods in interfaces?
-***12. What are the new features of Java8?
+12. What are the new features of Java8?
 13. 
 
 
