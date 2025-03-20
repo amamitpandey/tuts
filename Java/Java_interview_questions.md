@@ -79,14 +79,10 @@ Microservices
 13. What is API Gateway design pattern?
 14. What is the CQRS design pattern ?
 15. What is event driven design pattern?
-
-how can we create a bean of a third party jar in spring boot?
-How can we change the port in actuator?
-How can we manage the heap memory in the spring boot?
-Java 17 new features
-
-
-
+16. how can we create a bean of a third party jar in spring boot?
+17. How can we change the port in actuator?
+18. How can we manage the heap memory in the spring boot?
+19. Java 17 new features
 
 Java Coding questions 
 1. Merge 2 integer arrays
