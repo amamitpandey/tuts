@@ -42,7 +42,7 @@ Public MyClass{
 
 The above process of giving the control to some other (for example the container) for the instantiation and injection can be termed as Inversion of Control
 
-Type of Dependency Injection.
+#### Type of Dependency Injection.
 
 Constructor injection: This is the most common type of DI in Spring Boot. In constructor injection, the dependency object is injected into the dependent object’s constructor.
 
@@ -51,30 +51,18 @@ Setter injection: In setter injection, the dependency object is injected into th
 Field injection : In field injection, the dependency object is injected into the dependent object’s field.
 
 You can read more on dependency injection and IOC in my answer :- You can find advantages and applications of the concepts here.
+#### What is @AutoWiried? 
+Kind fo DI to use another class element.
 
-# Can you give few examples of Dependency Injection?
-dependentObject= new DependentClass();
-  dependentObject.someMethod();
-
-# put vs post vs patch method
+### put vs post vs patch method
 put use for update info fully
 Patch use for update only one field
 Post use for create new info
 
-# What is Auto Wiring? 
-Kind fo DI to use another class element
-
-
-# What are the important roles of an IOC Container?
-Initiate dependency obj for use using new key words
-
-# Context
+### Context
 Is just environment, scope where var method exit, can access by this keyword. 
 
-# What are Bean Factory and Application Context?
-Can you compare Bean Factory with Application Context?
-
-# BeanFactory and ApplicationContext:
+### What are Bean Factory and Application Context?
 both are spring container, ApplicationContext extends BeanFactory. BeanFactory provide basic and normal features and used in simple application.
 In short, BeanFactory provides basic Inversion of control(IoC) and Dependency Injection (DI) features while ApplicationContext provides advanced features.
 
