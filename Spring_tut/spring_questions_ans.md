@@ -151,7 +151,13 @@ singleton is first and default, after that we have prototype, request(HTTP), ses
 1. mockbean is part of spring framework used with @springboottest while mock is part of mockito framework used with @RunWith(MokitoRunner)
 2. Mockbean intract with spring context but mock interat with java obj
 3. both use for mocking/isolate of components, repository, services
-4. mock used for only unit Test case while mockbean used for unit and integration testcase. 
+4. mock used for only unit Test case while mockbean used for unit and integration testcase.
+
+## Spring boot layer
+1. Presentation layer: handle all http requests like put, post
+2. bussines layer: handle all bussiness logic
+3. presistance layer: interacting with DB usign JPA
+4. Database layer: crud operation 
 
 
 
