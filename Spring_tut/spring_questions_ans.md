@@ -1,4 +1,4 @@
-InterView questions :
+Interview questions :
 ### Benefit of using spring boot:
 * auto config like start config
 * auto embeded server
@@ -66,7 +66,7 @@ Is just environment, scope where var method exit, can access by this keyword.
 both are spring container, ApplicationContext extends BeanFactory. BeanFactory provide basic and normal features and used in simple application.
 In short, BeanFactory provides basic Inversion of control(IoC) and Dependency Injection (DI) features while ApplicationContext provides advanced features.
 
-## What’s the difference Between @Controller, @Component, @Repository, @SpringBootApplication and @Service Annotations in Spring?
+### What’s the difference Between @Controller, @Component, @Repository, @SpringBootApplication and @Service Annotations in Spring?
 @component : it's bean, it's for general purpose, either we can use as repository, service or as mmodel for easy to use.
 @controller : behave as a logic controller build for normal html, js whether @RestController by default return xml/json response.
 @Repository : use with JPA interface for gather info form db, a persistence layer of connection 
@@ -77,7 +77,7 @@ In short, BeanFactory provides basic Inversion of control(IoC) and Dependency In
 @ComponentScan to enable component scanning like services, repository.
 @EnableAutoConfiguration to enable Spring Boot's auto-configuration feature like dependency and libraries.
 
-## What is @Primary and @Qualifier?
+### What is @Primary and @Qualifier?
 if you have two beans with same interface, then these anotation decide which will get more prefrence.
 @qualifier will get more value. 
 @Primary indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
@@ -129,9 +129,6 @@ public BeanInterface bean1() {
 ### Application context:
 it handleer all kind or bean context at time creation, deletion.
 
-## Can you explain a simple flow in Spring MVC?
-just explain Model view and controller, spring also support frontend and backend part 
-
 ## What is the default scope of a bean?
 singleton is first and default, after that we have prototype, request(HTTP), session(HTTP), and application(HTTP) scopes
 
@@ -140,6 +137,9 @@ singleton is first and default, after that we have prototype, request(HTTP), ses
 2. Mockbean intract with spring context but mock interat with java obj
 3. both use for mocking/isolate of components, repository, services
 4. mock used for only unit Test case while mockbean used for unit and integration testcase.
+   
+### Can you explain a simple flow in Spring MVC?
+just explain Model view and controller, spring also support frontend and backend part 
 
 ## Spring boot layer
 1. Presentation layer: handle all http requests like put, post
