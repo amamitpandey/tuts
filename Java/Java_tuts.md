@@ -642,7 +642,60 @@ This process remove unused/unreachble variable or object from heap memory to inh
 ### Javabean:
 * Mostly contains properties of variable, getter, setter. maintain by IOC, DI in spring
 * State of bean: Instantiation(create by @component, @Service), DI(configure like autowired), Post-Initialization(setting all methid by @PostConstruct), Ready to use, and Destruction(by @preDestroy).
-* scope of bean: The rule is create a bean every time of request, available for all application and after using bean destroy the bean in scope. 
+* scope of bean: The rule is create a bean every time of request, available for all application and after using bean destroy the bean in scope.
+
+### POJO vs javabean
+POJO: as name suggest (plain old java obj) is a old thing, don't provide setter, serialization others advace things
+```
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+```
+Javabean: advance version of POJO, support default constructor, getter, setter, serialization. 
+```
+import java.io.Serializable;
+
+public class Person implements Serializable {
+    private String name;
+    private int age;
+
+    // No-argument constructor
+    public Person() {}
+
+    // Getter and Setter methods
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+```
 
 
 ### class loading process:
