@@ -4,7 +4,8 @@ As category it's devided in three part: Creational design pattern, stuctrual, be
 there are 23 type of design pattern, it depend on requiremnt which can use, don't use all in same times.
 
 ### 1. Creational design pattern
-#### a. Singalton: every instace is create a single time or once, it's means it stop creating duplicate instance. at time of decalare use static and private key to do this. update of parent class obj is not allowed
+#### A. Singalton: 
+every instace is create a single time or once, it's means it stop creating duplicate instance. at time of decalare use static and private key to do this. update of parent class obj is not allowed
 it save obj in cache memoryand use multiple times. by using @bean, @Component in spring boot, can be use this concept.
 example:
 
@@ -47,7 +48,8 @@ class AbcSingleton {
 }
 ```
 
-b. factory design pattern: in this design pattern we compose/process a obj by using inheritance concept, sub class obj can we modify, we try to achive loose couple things. 
+#### B. factory design pattern:
+in this design pattern we compose/process a obj by using inheritance concept, sub class obj can we modify, we try to achive loose couple things. 
 
 Code example:
 ```
@@ -91,7 +93,7 @@ class AdroidDevloper implements Employee{
 
 
 ```
-C. Abstraction design pattern:
+#### C. Abstraction design pattern:
 we are adding extra layer of a interface or factory design pattern. its similar type of factory design pattern, try to achive loose couple. 
 
 Below code example:
