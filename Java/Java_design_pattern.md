@@ -3,7 +3,8 @@ is a solution template of some problems which generally occur while coding.
 As category it's devided in three part: Creational design pattern, stuctrual, behavior design pattern.
 there are 23 type of design pattern, it depend on requiremnt which can use, don't use all in same times.
 
-### 1. Creational design pattern
+### 1. Creational design pattern:
+as name suggest handle all kind creation jaa obj, in a flexible and reusable manner
 #### A. Singalton: 
 every instace is create a single time or once, it's means it stop creating duplicate instance. at time of decalare use static and private key to do this. update of parent class obj is not allowed
 it save obj in cache memoryand use multiple times. by using @bean, @Component in spring boot, can be use this concept.
@@ -163,10 +164,89 @@ interface Employee {
 
 ```
 
-#2. stuctrual :
-Based on code stucture or project structure, we deside the code pattern
-#3. behavior design pattern :
+## 2. stuctrual :
+Based on code stucture or project structure, we deside the code pattern, relationships between objects and classes.
+## 3. behavior design pattern :
 this design pattern manage two object interaction behavior.  
+
+### Based on populality there are four pattern used in common.
+1. Singleton (Use Case: Database connection, logging, configuration management)
+2. factory design pattern  
+3. Observer design pattern(Use Case: Event listeners in Java (like GUI components))
+4. Strategy design pattern(Use Case: Sorting strategies (Comparator interface), Payment strategies, Sorting)
+
+### Observer design pattern:
+Defines a one-to-many dependency where multiple objects get notified when the state of one object changes
+```
+import java.util.*;
+
+interface Observer {
+    void update(String message);
+}
+
+class Subscriber implements Observer {
+    private String name;
+    public Subscriber(String name) { this.name = name; }
+    public void update(String message) { System.out.println(name + " received: " + message); }
+}
+
+class Publisher {
+    private List<Observer> observers = new ArrayList<>();
+    public void subscribe(Observer observer) { observers.add(observer); }
+    public void notifyObservers(String message) {
+        for (Observer o : observers) o.update(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Publisher news = new Publisher();
+        Observer user1 = new Subscriber("User1");
+        Observer user2 = new Subscriber("User2");
+
+        news.subscribe(user1);
+        news.subscribe(user2);
+        news.notifyObservers("New Video Uploaded!");
+    }
+}
+
+```
+
+### Strategy Pattern (Behavioral):
+Defines a family of algorithms and lets the client choose one at runtime
+```
+interface PaymentStrategy {
+    void pay(int amount);
+}
+
+class CreditCardPayment implements PaymentStrategy {
+    public void pay(int amount) { System.out.println("Paid $" + amount + " with Credit Card."); }
+}
+
+class PayPalPayment implements PaymentStrategy {
+    public void pay(int amount) { System.out.println("Paid $" + amount + " using PayPal."); }
+}
+
+class ShoppingCart {
+    private PaymentStrategy strategy;
+    public void setPaymentStrategy(PaymentStrategy strategy) { this.strategy = strategy; }
+    public void checkout(int amount) { strategy.pay(amount); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        cart.setPaymentStrategy(new CreditCardPayment());
+        cart.checkout(100);
+
+        cart.setPaymentStrategy(new PayPalPayment());
+        cart.checkout(50);
+    }
+}
+
+```
+
+
 
 
 to be complete later..
