@@ -638,6 +638,7 @@ Spring will support only Constructor Injection and Setter/Getter Injection.
 
 ### Garbage collection
 This process remove unused/unreachble variable or object from heap memory to inhance the app performace. it's automatic process.
+// can be remove two way Major: remove heap memory from JVM Minor: Remove obj for heap memory In java it's automatic but in C manually handle it, so Java is better in this case.
 Memory mangement are related to each other, memory mangment changes as per GC.
 1. Serial GC: used to remove unused obj one by one, block/pause application, work with one core process, slow good for simple app.
 2. Prallel GC: little fast than serial GC, use two core of process, prallel remove obj, use multi thread
@@ -653,7 +654,21 @@ G1GC - java 9
 ZGC - java 11
 SGC - Java 12
 
-// can be remove two way Major: remove heap memory from JVM Minor: Remove obj for heap memory In java it's automatic but in C manually handle it, so Java is better in this case.
+## Memory type:
+Stack memory: it's static memory, variable starting for static keywords and declare method, stored in this memory, once worked finished in scope, JVM auto remove them, follow LIFO.
+Heap memory: it's dynamic memory, hold/catche obj starting with new keywords, hold new created instance, work with GC
+
+
+### outOfMemoryError:
+When heap memory full, than we get this error
+#### Causes:
+1. Memory leakage: due to exiting refrence of obj, GC unable to removed them
+2. using large data set like ArrayList, hashmap
+3. Excessive new obj creation
+#### Solution:
+1. there are some tools like visualJVM, identify code block and optimize the code
+2. increase heap memory size
+3. enable garbage collection logging then identify the issue, optimize the code  
 
 ### Javabean:
 * Mostly contains properties of variable, getter, setter. maintain by IOC, DI in spring
