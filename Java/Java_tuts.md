@@ -635,8 +635,23 @@ Interface Injection
 
 Spring will support only Constructor Injection and Setter/Getter Injection.
 
+
 ### Garbage collection
 This process remove unused/unreachble variable or object from heap memory to inhance the app performace. it's automatic process.
+Memory mangement are related to each other, memory mangment changes as per GC.
+1. Serial GC: used to remove unused obj one by one, block/pause application, work with one core process, slow good for simple app.
+2. Prallel GC: little fast than serial GC, use two core of process, prallel remove obj, use multi thread
+3. CMS(concurret mark sweep):same work as praller GC, but faster, deprecated in java 9, removed in java 14, good for trading app, or real time app
+4. G1GC: introduced in java 9, heap memory>4gb
+5. ZGC(Z gen GC): introduced in java 11 and auto enable, less pause time, heap > 16GB
+6. Shenandoah GC: introduced in java 12 and auto enable, less pause time.
+
+### Memory mangement changes:
+Perm optimization - java 7
+Stack memmory management - java 8
+G1GC - java 9
+ZGC - java 11
+SGC - Java 12
 
 // can be remove two way Major: remove heap memory from JVM Minor: Remove obj for heap memory In java it's automatic but in C manually handle it, so Java is better in this case.
 
