@@ -145,7 +145,40 @@ just explain Model view and controller, spring also support frontend and backend
 1. Presentation layer: handle all http requests like put, post
 2. bussines layer: handle all bussiness logic
 3. presistance layer: interacting with DB usign JPA
-4. Database layer: crud operation 
+4. Database layer: crud operation
+
+## AOP:
+Aspect oriented programming; it's concept like OOPs, maintain code quality, use to handle centrized logging sys, security and trasaction sys.
+
+```
+@Aspect
+@Component // Make the aspect a Spring-managed bean
+public class LoggingAspect {
+
+    // This will run before the method execution
+    @Before("execution(* com.example.service.*.*(..))") 
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("Logging before method: " + joinPoint.getSignature().getName());
+    }
+
+    // This will run after the method execution
+    @After("execution(* com.example.service.*.*(..))") 
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Logging after method: " + joinPoint.getSignature().getName());
+    }
+
+    // This will run around the method execution (you can control when the method is called)
+    @Around("execution(* com.example.service.*.*(..))") 
+    public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("Before method execution: " + joinPoint.getSignature().getName());
+        Object result = joinPoint.proceed(); // Proceed with the method execution
+        System.out.println("After method execution: " + joinPoint.getSignature().getName());
+        return result;
+    }
+}
+// after that need to config each file @EnableAspectJAutoProxy
+
+```
 
 
 
