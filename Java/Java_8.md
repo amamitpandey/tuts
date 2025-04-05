@@ -378,10 +378,27 @@ int[] intArray = {1,2,33,2};
                 .map(x->x.getKey())
                 .findFirst().get()
         );
+
         // print count of each word
         String string2 = new String("madam pandey");
         System.out.println(Arrays.stream(string2.split("")).collect(Collectors.groupingBy(Function.identity(), Collectors.counting())));
 
+        // group by sample
+        List<CustomModel> list = new ArrayList<>();
+
+        list.add(new CustomModel(1,"02/01/2025","pencil"));
+        list.add(new CustomModel(2,"05/01/2025","pen"));
+        list.add(new CustomModel(3,"05/01/2025","copy"));
+
+
+        list.stream().sorted(Comparator.comparing(CustomModel::getId)).forEach(x-> System.out.println(x.getId()+" "+x.getDate()));
+        list.stream().collect(Collectors.groupingBy(CustomModel::getDate)).entrySet().stream()
+                .forEach(x-> {
+                                System.out.println(x.getKey());
+                                x.getValue().forEach(y-> System.out.println(y.getId()+" "+y.getName()));
+                });
+
+    }
 
 
     }
