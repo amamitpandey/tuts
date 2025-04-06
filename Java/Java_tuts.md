@@ -727,6 +727,38 @@ public class Person implements Serializable {
 }
 
 ```
+### Composite key: pair of tow parimary key form two table, like student_id+course_id, purpose is make a unique key in colume
+in java, we can use @mbeddable and @EmbeddedId
+```
+@Embeddable
+public class OrderId implements Serializable {
+    private Long userId;
+    private Long productId;
+
+    // equals, hashCode, getters, setters
+}
+
+@Entity
+public class Order {
+    @EmbeddedId
+    private OrderId id;
+
+    private int quantity;
+    // ...
+}
+
+```
+in sql, we can use
+```
+CREATE TABLE orders (
+    user_id INT,
+    product_id INT,
+    order_date DATE,
+    quantity INT,
+    PRIMARY KEY (user_id, product_id)
+);
+
+```
 
 
 ### class loading process:
