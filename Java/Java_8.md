@@ -254,7 +254,15 @@ public void nonStaticCustomMethod(){
 
 ## Code practice
 ```
-int[] intArray = {1,2,33,2};
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class Java8 {
+    public static void main(String[] args) {
+        int[] intArray = {1,2,33,2};
         List<Integer> intList = Arrays.asList(1,3,3);
         List<Integer> intList1 = new ArrayList<>();
         intList1.add(2);
@@ -263,14 +271,14 @@ int[] intArray = {1,2,33,2};
         // converting array to stream
         Arrays.stream(intArray).forEach(System.out::println);
 
-        Comparator<Integer> integerComparator = (a,b) -> (b - a);
+        Comparator<Integer> integerComparator = (a, b) -> (b - a);
         // converting arrayList to stream
         // sorting in desending order
         intList.stream().sorted(integerComparator).collect(Collectors.toList());
 
         // direct using stream to print 1 to 20
         // seed means starting point
-        Stream.iterate(1,x->x+1).limit(20).forEach(System.out::println);
+        Stream.iterate(1, x->x+1).limit(20).forEach(System.out::println);
 
         System.out.println("Filtering even nos");
         intList1.stream().filter(x->x%2==0).sorted().forEach(System.out::println);
@@ -394,38 +402,49 @@ int[] intArray = {1,2,33,2};
         list.stream().sorted(Comparator.comparing(CustomModel::getId)).forEach(x-> System.out.println(x.getId()+" "+x.getDate()));
         list.stream().collect(Collectors.groupingBy(CustomModel::getDate)).entrySet().stream()
                 .forEach(x-> {
-                                System.out.println(x.getKey());
-                                x.getValue().forEach(y-> System.out.println(y.getId()+" "+y.getName()));
+                    System.out.println(x.getKey());
+                    x.getValue().forEach(y-> System.out.println(y.getId()+" "+y.getName()));
                 });
 
     }
 
 
+}
+
+
+class CustomModel{
+
+    int id;
+    String name;
+    String date;
+
+    CustomModel(){}
+
+    public CustomModel(int id, String date, String name) {
+        this.id=id;
+        this.date=date;
+        this.name=name;
     }
 
-
-    static class  CustomModel{
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        int id;
-        String name;
+    public int getId() {
+        return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDate() {
+        return date;
+    }
 
 }
 
