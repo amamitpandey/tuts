@@ -1,9 +1,18 @@
 ## url redirect vs forward
 redirect happening as per front end level, forward as per backed level like follow MVC to forward the page
 
+## Http code:
+3xx for redirection
+4xx for client error
+400 bad req
+401 Unauthorized
+404 not found
+503 service unavalavible 
+
 ## how to encrypt password in form
 use https for encryption or special method as per JS like encode(password). this use esh algo
 
+##
 
 
 
