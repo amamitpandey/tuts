@@ -101,12 +101,14 @@ System.out.println(arr);
 System.out.println("Get first index where 'A' exit " + arr.indexOf("A"));
 System.out.println("Get first Last where 'A' exit " + arr.lastIndexOf("A"));
 System.out.println("Get object index " + arr.get(1));
-```
 
-ArrayList Constructor or Declaration 
+// ArrayList Constructor or Declaration 
 List arr = new ArrayList();
 List arr = new ArrayList(int initialCapacity ); 
 List arr = new ArrayList(Collection c);
+```
+
+
 
 ### Difference between ArrayList and Vector
 ArrayList
@@ -125,16 +127,16 @@ Useful for if frequent operation is add and remove at middle or any where. Worse
 
 ### ArrayList vs LinkedList
 
-ArrayList
-Good for retrieving data
-Not good for adding and removing
-Random access use for fast getting data
-Resizable and growable
-LinkList
-Not good for getting the data
-Good for add and remove data
-Not use random access
-Doubly linked list
+#### ArrayList
+* Good for retrieving data
+* Not good for adding and removing
+* Random access use for fast getting data
+* Resizable and growable
+#### LinkList
+* Not good for getting the data
+* Good for add and remove data
+* Not use random access
+* Doubly linked list
 
 
 
@@ -191,7 +193,7 @@ Methods : hasMoreElement(), nextElement(), addElement(i)
          System.out.println(days.nextElement()); 
       }
 
-Iterator : 
+### Iterator : 
 Universal cursor
 Read and remove
 
@@ -222,8 +224,8 @@ Method : hasNext(), next(), remove()
         System.out.println(); 
 ```
 
-ListIterator:
-Bi directional 
+### ListIterator:
+### Bi directional 
 Add, remove, update features
 It’s a child of an iterator.
 
@@ -268,21 +270,12 @@ remove(), set(), add()
 
 
 
-# Comparison of cursor
+### Comparison of cursor
 
-Enumeration
-Iterator
-ListIterator
-Applicable for Only for legacy
-universal
-List class
-Movement
-Only forward
-Only forward
-Uni
-Accessibility
-read
-read,remove
+Enumeration                         Iterator                                            ListIterator
+Applicable for Only for legacy      universal                                          List class
+Movement Only forward               Only forward                                       Uni
+Accessibility read                   read                                              remove
 crud
 Get it by
 Vector dayNames = new Vector();
@@ -308,7 +301,7 @@ Introduces version
 1.2v
 
 
-# Set
+### Set
 HashSet :
 Is child interface of collection, Best for searching duplicate allowed indexing are not allowed. Best for sorting, If duplicated found return false not exception
 
@@ -470,7 +463,7 @@ yes(Only once)
 yes(for empty tree only)
 
 
-# NavigableSet
+### NavigableSet
 It’s child set of sorted sets defines several methods for navigation purposes.
 It provides nearby values like train time around 10am.
 
@@ -574,7 +567,7 @@ When you need atomic operations like putIfAbsent, remove, or replace to avoid ra
 
 
 
-LinkedList:
+### LinkedList:
 Used underlying data structure hybrid ( linkedlist + hashtable)
 Insertion order preserved
 Used for cache app
@@ -651,7 +644,7 @@ class Temp {
 
 ```
 
-#SortedMap
+### SortedMap
 methods():					// { 101=A, 103=B, 104=C, 107=D, 125=E, 136=F }
 FirstKey() // {101=A}
 lastkey() //{ 136=F }
@@ -660,7 +653,7 @@ tailMap(125) // { 136 = F }
 subMap(103,107) // { 104=C }
 Comparator comparator() -> null // follow DNSO
 
-# TreeMap
+### TreeMap
 Data type - red black tree
 Indexing not allowed
 Duplicate key not allowed
@@ -681,7 +674,7 @@ t.put(99,”ZZZ11”)
 t.put(“sss”,”ZZZs1”)
 sop(t) // { 99=ZZZ11,100=ZZZ }
 
-#NavigableMap(1.6) :
+### NavigableMap(1.6) :
 Search should be based on key
 
 TreeMap<String,String> t = new TreeMap<String,String>();
@@ -700,7 +693,7 @@ System.out.println(t.descendingMap());  // {d=dog, c=cat}
 System.out.println(t); // {c=cat, d=dog}
 
 
-HashTable
+### HashTable
 Underlying data structure is hashtable
 Insertion order not preserved
 Heterogeneous/any type allowed for key/value
@@ -816,7 +809,7 @@ for (String s : al) {
 System.out.println("For exiting element " + Arrays.binarySearch(al, "a")); // 0 // if found, give +ve no with index
 System.out.println("For not exiting element " + Arrays.binarySearch(al, "z")); // -5 // if not
 
-# how HashMap works internally
+### how HashMap works internally
 hashMap based on node
 
 
@@ -839,6 +832,12 @@ If index is same but key is different than map with internal key
 Steps for retrieve data:
 Get the index, if key found in that index return value
 In index, value is not found then search for next(use next fn) and return value.   
+
+
+### Fail fast Fail safe
+* Fail fast: we one collection is working in loop and in between we modifiy, then it throw concernModificationException(). it's fast, good for if we try to avoid modification in between. normally work with ArrayList and some collections
+* Fail Safe: if we want to modify collection in between without exception we can go with ConcernHasMap, it also work with multi thread, it's slower.
+  
 
 
 ## Tuts refrence: Durga software(https://www.youtube.com/watch?v=rI3VkItC0eA&list=PLd3UqWTnYXOkVR3OR9UZGyEt9RFUbaTMZ)
