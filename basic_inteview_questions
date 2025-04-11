@@ -1,3 +1,12 @@
+## url redirect vs forward
+redirect happening as per front end level, forward as per backed level like follow MVC to forward the page
+
+## how to encrypt password in form
+use https for encryption or special method as per JS like encode(password). this use esh algo
+
+
+
+
 # REST vs SOAP API
 Soap use xml format but rest use any one JSON or XML
 Soap use WSDL(web service definition language) rule but rest not
