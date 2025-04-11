@@ -41,6 +41,9 @@ JOIN
     Course c ON c.course_id = e.course_id;
 
 ```
+### How to test delete sql query, it don't return anything
+1. to test it, we can see affected row by sqlquery.excuteUpdate(), assertequal(1,affectedRow).
+2. first delete by user than try to find it again if notfound means deleted.   
 
 
 
