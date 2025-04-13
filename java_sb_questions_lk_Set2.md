@@ -163,30 +163,109 @@ Spring Data
 - What is a CrudRepository?
 - What is a PagingAndSortingRepository?
 
-### Database Connectivity - JDBC, Spring JDBC & JPA
+Database Connectivity - JDBC, Spring JDBC & JPA
 
 - What is Spring JDBC? How is different from JDBC?
-What is a JdbcTemplate?
-What is a RowMapper?
-What is JPA?
-What is Hibernate?
-How do you define an entity in JPA?
-What is an Entity Manager?
-What is a Persistence Context?
-How do you map relationships in JPA?
-What are the different types of relationships in JPA?
-How do you define One to One Mapping in JPA?
-How do you define One to Many Mapping in JPA?
-How do you define Many to Many Mapping in JPA?
-How do you define a datasource in a Spring Context?
-What is the use of persistence.xml
-How do you configure Entity Manager Factory and Transaction Manager?
-How do you define transaction management for Spring – Hibernate integration?
+- What is a JdbcTemplate?
+- What is a RowMapper?
+- How do you define an entity in JPA?
+- What is an Entity Manager?
+- What is a Persistence Context?
+- How do you map relationships in JPA?
+- What are the different types of relationships in JPA?
+- How do you define One to One Mapping in JPA?
+- How do you define One to Many Mapping in JPA?
+- How do you define Many to Many Mapping in JPA?
+- How do you define a datasource in a Spring Context?
+- What is the use of persistence.xml
+- How do you configure Entity Manager Factory and Transaction Manager?
+- How do you define transaction management for Spring – Hibernate integration?
   
 Junit:
 -	What’s Mockito framework
 -	How will you implement Junit
 -	What all the use cases you implemented using JUnits
+-	How does Spring Framework Make Unit Testing Easy?
+- How do you do mock data with Mockito?
+- What are the different mocking annotations that you worked with?
+- What is MockMvc?
+- What is @WebMvcTest?
+- What is @MockBean?
+- How do you write a unit test with MockMVC?
+- What is JSONAssert?
+- How do you write an integration test with Spring Boot?
+- What is @SpringBootTest?
+- What is @LocalServerPort?
+- What is TestRestTemplate?
+
+
+AOP
+- What are cross cutting concerns?
+- How do you implement cross cutting concerns in a web application?
+- If you would want to log every request to a web application, what are the options you can think of?
+- If you would want to track performance of every request, what options can you think of?
+- What is an Aspect and Pointcut in AOP?
+- What are the different types of AOP advices?
+- What is weaving?
+- Compare Spring AOP vs AspectJ?
+  
+SOAP Web Services
+- What is a Web Service?
+- What is SOAP Web Service?
+- What is SOAP?
+- What is a SOAP Envelope?
+- What is SOAP Header and SOAP Body?
+- Can you give an example of SOAP Request and SOAP Response?
+- What is a SOAP Header? What kind of information is sent in a SOAP Header?
+- Can you give an example of a SOAP Header with Authentication information?
+- What is WSDL (Web Service Definition Language)?
+- What are the different parts of a WSDL?
+- What is Contract First Approach?
+- What is an XSD?
+- Can you give an example of an XSD?
+- What is JAXB?
+- How do you configure a JAXB Plugin?
+- What is an Endpoint?
+- Can you show an example endpoint written with Spring Web Services?
+- What is a MessageDispatcherServlet?
+- How do you configure a MessageDispatcherServlet?
+- How do you generate a WSDL using Spring Web Services?
+- How do you implement error handling for SOAP Web Services?
+- What is a SOAP Fault?
+
+RESTful Web Services
+
+- What is REST?
+- What are the key concepts in designing RESTful API?
+- What are the Best Practices of RESTful Services?
+- Can you show the code for an example Get Resource method with Spring REST?
+- What happens when we return a bean from a Request Mapping Method?
+- What is GetMapping and what are the related methods available in Spring MVC?
+- Can you show the code for an example Post Resource method with Spring REST?
+- What is the appropriate HTTP Response Status for successful execution of a Resource Creation?
+- Why do we use ResponseEntity in a RESTful Service?
+- What is HATEOAS?
+- Can you give an Example Response for HATEOAS?
+- How do we implement it using Spring?
+- How do you document RESTful web services?
+- Can you give a brief idea about Swagger Documentation?
+- How do you automate generation of Swagger Documentation from RESTful Web Services?
+- How do you add custom information to Swagger Documentation generated from RESTful Web Services?
+- What is "Representation" of a Resource?
+- What is Content Negotiation?
+- Which HTTP Header is used for Content Negotiation?
+- How do we implement it using Spring Boot?
+- How do you add XML support to your RESTful Services built with Spring Boot?
+- How do you implement Exception Handling for RESTFul Web Services?
+- What are the best practices related to Exception Handling with respect to RESTful Web Services?
+- What are the different error status that you would return in RESTful Web Services?
+- How would you implement them using Spring Boot?
+- What HTTP Response Status do you return for validation errors?
+- How do you handle Validation Errors with RESTful Web Services?
+- Why do we need Versioning for RESTful Web Services?
+- What are the versioning options that are available?
+- How do you implement Versioning for RESTful Web Services?
+
 
 CI/CD:
 -	What is Jenkins
