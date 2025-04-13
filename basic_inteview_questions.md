@@ -1,7 +1,7 @@
-## url redirect vs forward
+### Url redirect vs forward
 redirect happening as per front end level, forward as per backed level like follow MVC to forward the page
 
-## Http code:
+### Http code:
 3xx for redirection
 4xx for client error
 400 bad req
@@ -9,23 +9,19 @@ redirect happening as per front end level, forward as per backed level like foll
 404 not found
 503 service unavalavible 
 
-## how to encrypt password in form
+### how to encrypt password in form
 use https for encryption or special method as per JS like encode(password). this use esh algo
 
-##
-
-
-
-# REST vs SOAP API
+### REST vs SOAP API
 Soap use xml format but rest use any one JSON or XML
 Soap use WSDL(web service definition language) rule but rest not
 Soap may use protocol HTTP or MQ but most of rest follow HTTP req
 Example of soap api sky-scanner and rest normal login req 
 
-# Why did you want to be a software developer?
+### Why did you want to be a software developer?
 U know, I like to implement logic. When logic works it makes me happy and this chance i am getting as software developer that why i am a software developer.
 
-# Why should we hire you and not the other applicants?
+### Why should we hire you and not the other applicants?
 As i said i love to implement logic and love coding  so I am passionate about my job, 100% give time to work, if deadline do not meet then able to work from home,and try my best 
 
 # What are your salary expectations?
