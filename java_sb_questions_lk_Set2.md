@@ -98,7 +98,96 @@ Spring Boot:
 -	What’s Actuator
 -	How to migrate existing project to Springboot?
 -	What are Springboot starters?
--	
+-	What is Starter Parent?
+-	Compare Spring Boot vs Spring MVC?
+- How can we find more information about Auto Configuration?
+- Can you give examples of important starter projects?
+- What are the different things that are defined in Starter Parent?
+- How does Spring Boot enforce common dependency management for all its Starter projects?
+- How can you add custom application properties using Spring Boot?
+- What is @ConfigurationProperties?
+- How do you have different configuration for different environments?
+- How do you monitor web services using Spring Boot Actuator?
+- What is a CommandLineRunner?
+
+Spring MVC
+
+-	How do you create an application context with Spring?
+- Are Spring beans thread safe?
+- How do you define a component scan in XML and Java Configurations?
+- What are the other scopes available?
+- What is the difference between XML and Java Configurations for Spring?
+- What are the different kinds of matching used by Spring for Autowiring?
+- How do you solve NoSuchBeanDefinitionException?
+- What is CDI (Contexts and Dependency Injection)?
+- Does Spring Support CDI?
+- Would you recommed to use CDI or Spring Annotations?
+- What are important Spring Modules?
+- What are important Spring Projects?
+- What is the simplest way of ensuring that we are using single version of all Spring related dependencies?
+- Name some of the design patterns used in Spring Framework?
+- What is Model 1 architecture?
+- What is Model 2 architecture?
+- What is Model 2 Front Controller architecture?
+- Can you show an example controller method in Spring MVC?
+- What is a ViewResolver?
+- What is ModelAndView?
+- What is a form backing object?
+- How is validation done using Spring MVC?
+- What is BindingResult?
+- How do you map validation results to your view?
+- What are Spring Form Tags?
+- What is a Path Variable?
+- What is a Model Attribute?
+- What is a Session Attribute?
+- What is a init binder?
+- How do you set default date format with Spring?
+- Why is Spring MVC so popular?
+-	What’s Spring framework & advantages
+-	What’s IOC(Inversion of Control)
+-	Different ways of Dependency Injections
+-	Difference between Constructor & Setter Injection
+-	Difference between independent Singleton object & Spring Singleton Bean
+-	What’s are different scopes of Spring Beans.
+-	What’s autowiring & different modes
+-	What's limitations of autowiring
+-	What’s repository in Spring Data JPA
+-	What’s Callback in DB
+-	How to manage transactions in DB
+
+Spring Data
+
+- What is Spring Data?
+- What is the need for Spring Data?
+- What is Spring Data JPA?
+- What is a CrudRepository?
+- What is a PagingAndSortingRepository?
+
+### Database Connectivity - JDBC, Spring JDBC & JPA
+
+- What is Spring JDBC? How is different from JDBC?
+What is a JdbcTemplate?
+What is a RowMapper?
+What is JPA?
+What is Hibernate?
+How do you define an entity in JPA?
+What is an Entity Manager?
+What is a Persistence Context?
+How do you map relationships in JPA?
+What are the different types of relationships in JPA?
+How do you define One to One Mapping in JPA?
+How do you define One to Many Mapping in JPA?
+How do you define Many to Many Mapping in JPA?
+How do you define a datasource in a Spring Context?
+What is the use of persistence.xml
+How do you configure Entity Manager Factory and Transaction Manager?
+How do you define transaction management for Spring – Hibernate integration?
+  
+Junit:
+-	What’s Mockito framework
+-	How will you implement Junit
+-	What all the use cases you implemented using JUnits
+
 CI/CD:
 -	What is Jenkins
 -	Why is Jenkins used
@@ -106,6 +195,7 @@ CI/CD:
 -	What’s CI/CD pipeline 
 -	How to configure CI pipeline
 -	How to build, test and deploy the application with Jenkins
+
 REST API: 
 -	What is REST web services
 -	What are HTTP methods supported by REST
@@ -119,22 +209,8 @@ REST API:
 -	What’s are Idempotent methods
 -	How to create/implement REST API
 -	How to expose Restful webservice
-Spring:
--	What’s Spring framework & advantages
--	What’s IOC(Inversion of Control)
--	Different ways of Dependency Injections
--	Difference between Constructor & Setter Injection
--	Difference between independent Singleton object & Spring Singleton Bean
--	What’s are different scopes of Spring Beans.
--	What’s autowiring & different modes
--	What's limitations of autowiring
--	What’s repository in Spring Data JPA
--	What’s Callback in DB
--	How to manage transactions in DB
-Junit:
--	What’s Mockito framework
--	How will you implement Junit
--	What all the use cases you implemented using JUnits
+  
+
 
 Project Related Questions:
 -	Tell brief about the current project & your roles & responsibilities
