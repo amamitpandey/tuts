@@ -187,13 +187,23 @@ singleton is first and default, after that we have prototype, request(HTTP), ses
 ### Can you explain a simple flow in Spring MVC?
 just explain Model view and controller, spring also support frontend and backend part 
 
-## Spring boot layer
+### Spring boot layer
 1. Presentation layer: handle all http requests like put, post
 2. bussines layer: handle all bussiness logic
 3. presistance layer: interacting with DB usign JPA
 4. Database layer: crud operation
 
-## AOP:
+### Spring boot life cycle:
+1. Application startup: use SpringApplication.run(), baiscally see main method and inside method. create applicationContext:add spring container, like IOC and BeanFactory
+2. Enviroment Prepration: setup application.properites, many env properties files and enviromet variable files
+3. Context creation: setup load bean, auto config, componenent scan
+4. Bean inilization: DI, @PostCostruct, call beans, initialize custom bean
+5. Application ready: ApplicationRunner bean run, applicationReadyEvent fired, now ready to serve request
+6. Runnnig state: Tomcat accepting req and responding
+7. Shuntdown: shutdown hook register, @preDestroy method call, ContextClose event is published.
+
+       
+### AOP:
 Aspect oriented programming; it's concept like OOPs, maintain code quality, use to handle centrized logging sys, security and trasaction sys.
 
 ```
