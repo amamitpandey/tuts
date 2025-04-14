@@ -191,7 +191,16 @@ Runnable r = () -> {
 Thread t = new Thread(r);
 t.start();
 
-Default method and static method in interface :
+### Default method vs static method in interface :
+- both method have body
+- static method can't override but default can
+- for use default method, need to create new instance like normal method, but in case of static method we can directly use like MyInterface.custStaticMethod()
+- staic method use as a utility or helper, like isValidate()
+```
+static void isAmtMorethanZero(int i1){
+retrurn i>0; }
+```
+
 ```
 class TestClass implements I1{
 
