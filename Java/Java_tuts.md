@@ -648,15 +648,18 @@ Memory mangement are related to each other, memory mangment changes as per GC.
 6. Shenandoah GC: introduced in java 12 and auto enable, less pause time.
 
 ### Memory mangement changes:
-Perm optimization - java 7
-Stack memmory management - java 8
-G1GC - java 9
-ZGC - java 11
-SGC - Java 12
+- Permgen optimization - java 7
+- Stack and MataSpace memmory management - java 8
+- G1GC - java 9
+- ZGC - java 11
+- SGC - Java 12
 
 ## Memory type:
 Stack memory: it's static memory, variable starting for static keywords and declare method, stored in this memory, once worked finished in scope, JVM auto remove them, follow LIFO.
 Heap memory: it's dynamic memory, hold/catche obj starting with new keywords, hold new created instance, work with GC
+MataSpace: introduced in java 8, native memory, no limit of extended 
+// legacy
+PermGen: before in java 8, or upto java 7, part of heap memory, limit memory 
 
 
 ### outOfMemoryError:
