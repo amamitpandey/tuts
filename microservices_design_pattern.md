@@ -49,6 +49,11 @@ if anything fail we can rollback.
 Command(read) and Query(write), here we are divinding into two DB, one for insertion/updatation like RDBMS, second for reading purpose like NoSQL. due to for insertion, inserting many confidential info like SSN, ADHAR, full details. but for view pupose we don't need full info just summary is good.
 internally one event bus like azure bus to sync two DB. 
 
+## Microservices commucation:
+there are way
+1. Sychronious: simple https call where session does not store, Just request and response
+2. Asynchronious: Real-time message or event based call, like observes in JS, maintian events, hard to maintain. Ex Kafka
+
 
 
 
