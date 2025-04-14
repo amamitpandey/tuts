@@ -235,6 +235,45 @@ public class LoggingAspect {
 // after that need to config each file @EnableAspectJAutoProxy
 
 ```
+### Caching in Spring Boot:
+is one of the easiest ways to improve performance — especially for slow methods like database queries, remote API calls, or expensive computations.
+
+multiple cache way like:
+Simple (default): uses a ConcurrentHashMap
+Ehcache, Caffeine
+Redis, Hazelcast, etc.
+- add dependecy : spring-boot-starter-cache
+- enable in main:
+```
+@SpringBootApplication
+@EnableCaching
+public class MyApp {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+}
+```
+```
+@Service
+public class ProductService {
+
+    @Cacheable("products")
+    public Product getProductById(Long id) {
+        simulateSlowService();
+        return new Product(id, "MacBook Air");
+    }
+
+    private void simulateSlowService() {
+        try {
+            Thread.sleep(3000); // pretend it's a slow DB/API call
+        } catch (InterruptedException e) {
+            throw new IllegalStateException(e);
+        }
+    }
+}
+```
+
+
 
 
 
