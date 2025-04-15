@@ -311,6 +311,16 @@ like this refer current method or current class, like super refer just parent cl
     public int tiers = 4;
     }
  ```
+### association, aggregation and composition 
+Assocation is brother of inheritace, we are reusing of code, using dependenc injection or creating new instance touse this feature. part of oops concept
+inheritance use (is-a)/blood relation use extends keyword, while Association use (has-a) try to use loose couple things.
+- Association
+   - aggregation (weak bond)
+   - composition ( strong bond)
+Example: Car class
+            - musicPlayer, follow aggregation, both are independable, loss couple
+            - Engine, follow composition, both are tighly couple, egine made for special model   
+
  ## final keyword
  - final class/variable can't modify, same or from another class 
  - final class are not extendble/inheritance 
