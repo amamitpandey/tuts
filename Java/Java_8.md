@@ -260,6 +260,10 @@ public void nonStaticCustomMethod(){
 introduced in java 8, better to handle to null exception, follow function style.
 we have Optional.empty() - method to check but it'll not throw exception. if we are getting collection with null we can process it with.
 
+there are some method:
+- Optional.of("amit"): don't use of if null value expected throw nullpointException
+- Optional.ofNullable(value): use of null value expected, don't throw nullpointerException.
+
 
 
 
