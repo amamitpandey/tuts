@@ -272,6 +272,9 @@ public class ProductService {
     }
 }
 ```
+### Configure two DB in spring boot
+- add both in application.yml
+- create two config file with trasaction manager(@EnableTransactionManagement), add @primary with main DB and another config file don't add @primary
 
 
 
