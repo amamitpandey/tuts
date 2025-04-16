@@ -41,9 +41,39 @@ JOIN
     Course c ON c.course_id = e.course_id;
 
 ```
+
+### use cases 
+```
+SELECT
+  column1,
+  column2,
+  CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    ELSE result_default
+  END AS alias_name
+FROM your_table;
+
+```
+
+### use case with join with two diffrent table
+```
+SELECT 
+  c.name,
+  o.amount,
+  CASE 
+    WHEN o.amount >= 1000 THEN 'High Spender'
+    WHEN o.amount >= 500 THEN 'Medium Spender'
+    ELSE 'Low Spender'
+  END AS spender_level
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+``` 
 ### How to test delete sql query, it don't return anything
 1. to test it, we can see affected row by sqlquery.excuteUpdate(), assertequal(1,affectedRow).
-2. first delete by user than try to find it again if notfound means deleted.   
+2. first delete by user than try to find it again if notfound means deleted.
+
+
 
 
 
