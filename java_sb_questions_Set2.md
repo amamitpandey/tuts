@@ -5,24 +5,17 @@ Core Java:
 -	What’s method hiding
 -	Different types of Polymorphism
 -	What’s Marker Interface & usage? Mention some examples
--	What’s Closeable Interface and usage.
--	What is final keyword in Java
--	Can you change state of an object referenced by a final
--	Java parameters are passed by value or reference
--	Difference between equal to operator (==) and equals()
--	How can you modify a String
--	Why String class has been made immutable in Java
--	What is finally
--	Is finally always required in Java 8
--	Which resources can be used in try-with-resources
--	What is a functional interface
--	What is the purpose of using @FunctionaInterface
--	What is finalize
--	What are overloaded methods
--	Can you name Java primitive types
--	What is JIT compiler
+-	What’s Closeable Interface and usage. 
+-	Can you change state of an object referenced by a final : yes,var is fix but obj can caontain dynamic value
+-	Java parameters are passed by value or reference : passed by value but use referrance to pass
+-	Difference between equal to operator (==) and equals() : == check refernce but equals check value
+-	How can you modify a String : no, but we have string builder and string buffer to modify
+-	Why String class has been made immutable in Java : for security and performance purpose, string may store password or filePath
+-	What is finally : use with try,catch, finally(optinal), use for clean memory after work
+-	Is finally always required in Java 8 : no - finally(optinal)
+-	Which resources can be used in try-with-resources : filereader, stream, DB connection, Https connection
+-	What is finalize : work with GC, auto clean some var, after java 9 deprecated replace with AutoCloseable interface 
 -	What are the steps in Object creation
--	What is a default constructor
 -	What happens with Class.forName method
 -	How you can destroy and object
 -	Can you explicitly destroy an object
