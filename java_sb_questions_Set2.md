@@ -1,10 +1,8 @@
 Interview questions:
 Core Java:
--	What are OOPS principals
 -	Difference between Encapsulation & Abstraction
 -	What’s method hiding
 -	Different types of Polymorphism
--	What’s Marker Interface & usage? Mention some examples
 -	What’s Closeable Interface and usage. 
 -	Can you change state of an object referenced by a final : yes,var is fix but obj can caontain dynamic value
 -	Java parameters are passed by value or reference : passed by value but use referrance to pass
@@ -17,10 +15,9 @@ Core Java:
 -	What is finalize : work with GC, auto clean some var, after java 9 deprecated replace with AutoCloseable interface 
 -	What are the steps in Object creation
 -	What happens with Class.forName method
--	How you can destroy and object
 -	Can you explicitly destroy an object
 -	What are the similarities between abstract class and an interface
--	Can we have concrete methods in Interface
+-	Can we have concrete methods in Interface :yes after java 8
 -	What’s enum & strict keyword
 -	What’s transient & volatile keyword
 -	What’s Marker Interface
