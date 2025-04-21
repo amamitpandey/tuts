@@ -329,10 +329,11 @@ Example: Car class
  - Preffered for more security otherwise not reccomended 
  
  ## final vs static
- - in same same class can't modify
+ - in same class final obj can't modify but static can be modified.
  - from another class static variable are modifilable but final can't.
  - Static used for memory sharing, it'll create a new/copy a object and work
- - Static use take adavantage of inheritance. 
+ - Static use take adavantage of inheritance.
+ - Static is class that's fixed in nature but obj/var of this class can be updateble    
  
  ```
 public class TestInheritance extends Car {
