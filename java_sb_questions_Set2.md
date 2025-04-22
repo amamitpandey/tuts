@@ -14,7 +14,7 @@ Core Java:
 -	Which resources can be used in try-with-resources : filereader, stream, DB connection, Https connection
 -	What is finalize : work with GC, auto clean some var, after java 9 deprecated replace with AutoCloseable interface 
 -	What are the steps in Object creation
--	What happens with Class.forName method
+-	What happens with Class.forName method : load package or driver at runtime, part of java.reflection.util, like DB driver, Class<?> clazz = class.forName("com.example")
 -	Can you explicitly destroy an object
 -	What are the similarities between abstract class and an interface
 -	Can we have concrete methods in Interface :yes after java 8
