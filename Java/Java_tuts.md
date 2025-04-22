@@ -1,5 +1,5 @@
 
-# Java tuts
+## Java tuts
 
 **Benefit of java**
 
@@ -63,6 +63,7 @@ public class CustomeClass {
 - transient:  keyword is used to avoid serialized process, so it does not transmit over the network or file or JSON, like password has senstive data, we don't want share with any except db. eg: private transient String password;
 - enum: it's a class, use to save variable like string, integer, here we have some predefine fn to use condition, short for enumeration, it's only read only, don't have remove fn, let say if we want return 1 for true and 0 for false.
   generally we use for switch cases.
+- strict or strictfp: strict float point, a access modifier, use with class, var. it make sure the value are same in all places like windows, linux, AMD, intel, follow IEEE 754 standard.  
   ```
   enum condEnum{
   true(1);
@@ -433,11 +434,11 @@ drive name fgf
 returnName returnName
 ```
 
-## importing one package to another
+### importing one package to another
 import com.test.* // calling all classes within this package
 import com.test.specificClass
 
-## Error handler
+### Error handler
 - checked, at compilation type ex: IOexception, FileNotFoundException, SQLexception
 - unchecked, at runtime ex: nullpointerexception, airthmeticexception
 
@@ -611,13 +612,13 @@ Abstraction:
 public static void main (int[] args) : at starting jvm only accept String[]. If try than give - "please define the main method as: public static void main(String[] args)”
 
 Alternative we can define another main :
-
+```
 public class IntArgsTest { 
 public static void main(int[] args) { IntArgsTest iat = new IntArgsTest(args); } 
 public IntArgsTest(int[] n) { System.out.println(n[0]); }; 
 
 public static void main(String[] args) { int[] intArgs = new int[args.length]; for (int i : intArgs) { try { intArgs[i] = Integer.parseInt(args[i]); } catch (NumberFormatException e) { System.err.println("Failed trying to parse a non-numeric argument, " + args[i]); } } main(intArgs); } }
-
+```
 ### Can a constructor be made final in Java? 
 No, by default constructor can’t be override. and final method cannot be overridden by any subclasses so there are no use of it.
 
@@ -629,7 +630,10 @@ Yes, to prevent use in subclass, can’t create instant from outsider class, use
 
 ### Type of polymorphism :
 Overloading : method name will same but params will differ, if there is any mistake it’s give run time error.
-Overriding : method signature, name, parameter will same, it can be overwritten. Give compile time error.   
+Overriding : method signature, name, parameter will same, it can be overwritten. Give compile time error.  
+
+### Hide method:
+it's like override, in java we can override default method but not static method, so without override we can update the body, this is called hide method.
 
 ### Difference between Inversion of Control & Dependency Injenction
 
@@ -787,6 +791,13 @@ JVMuse to load by below process
 3. application loader: it load all class written by coder
 4. custom class loader(optional): it add all additional classes like server config, DB config, or loose couple things.
 
+### Steps of loading object:
+1. load .class
+2. allocate in heap memory
+3. set default value
+4. call the construtor
+5. return refernce of obj
+
 ### Java 17 benefit:
 1. update JVM and garbage collection to improve compile, building and compile time.
 2. interface is updated with sealed class
@@ -800,6 +811,11 @@ ObjectOutputStream and ObjectInputStream, so these method take care all serilize
 
 ### closeble interface : 
 it's come with Java.io to handle IOException, purpose is close property of working with file, stream type of work, to free system memory
+
+### Explicity or Directly destroy method:
+- we can't destroy directly a var or obj but we can assign value as nullthan call system.gc(), GC can destory it
+- in case of IO, stream, DB connection, better to use try-resource-catch, it'll auto remove those
+    
 ```
 try{
 FileReader filereader = new Filereader("text.txt");
