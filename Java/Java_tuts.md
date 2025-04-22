@@ -792,4 +792,21 @@ JVMuse to load by below process
 2. interface is updated with sealed class
 3. introduce with records and Pattern matching.
 4. as normal we see it's enhance the performance, sercurity and LTS(long term support) time.
+
+### Marker interface:
+it's empty interface with no method. JVM treat as a special interface, example: serialize.
+if we take a example of serialize there is no method, but still checking isSerilize or not due to it's using Java.io utill:
+ObjectOutputStream and ObjectInputStream, so these method take care all serilize and deserilize. use Object model to deserilize without constructor.
+
+### closeble interface : 
+it's come with Java.io to handle IOException, purpose is close property of working with file, stream type of work, to free system memory
+```
+try{
+FileReader filereader = new Filereader("text.txt");
+}catch(IOException e){
+// close / auto close file here
+}
+```
+
+
    
