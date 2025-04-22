@@ -583,8 +583,9 @@ Integer I2 = new Integer(10);
 system.out.println(I1==I2) // false
 system.out.println(I1.equals(I2)) // true
 
-IdentityHashMap : this is kind of map which use (==) compare address for checking key compare 
-
+### IdentityHashMap :
+this is kind of map which use (==) compare address for checking key compare 
+```
 Integer I1 = new Integer(10);
 Integer I2 = new Integer(10);
 
@@ -593,14 +594,14 @@ m.put(I1, “I1”)
 m.put(I2, “I2”)
 sop(m) // {10 = I2}
 
-For Identity map
+// For Identity map
 
 IdentityMap m = new IdentityMap();
 m.put(I1, “I1”)
 m.put(I2, “I2”)
 sop(m) // {10 = I1, 10 = I2} 
 // inserted repeated value
-
+```
 ### WeakHashMap:
 As the name suggests it's a weak map. If the value of any key is null then the garbage collector removes that element but in case of any other map the garbage collector(gc) can’t.
 
@@ -810,24 +811,24 @@ System.out.println("For exiting element " + Arrays.binarySearch(al, "a")); // 0 
 System.out.println("For not exiting element " + Arrays.binarySearch(al, "z")); // -5 // if not
 
 ### how HashMap works internally
-hashMap based on node
+- using key.hasCode(), try to find hash code
+- using has code hashcodeKey && (n-1), fing bucket index, at staritng HashMap start with 16 index allocated, reflection value is .75/75%, if exit add another 16 index
+- using bucket index, jvm try to push key value pair and pointer as a linked list, if some value already exit there, it compare with .equal to method of key then push new value in same index.
+- retrive data in same way, find hashcode, find bucket index, compare key with equals() and get back there
 
-
+```  
+//hashMap based on node, in every linked list contain these things
 node
 key
 value
 next()
-
 
 There are three method available
 equals(): compare key if found then replace otherwise replace
 hashcode() : return a reference/address/Integer where element is inserted.
 buckets(): node of array.
 
-Steps for insertion/replacement:
-Get index by using formula = hashcodeKey && (n-1)
-Use an equal method for compare key and index if not found insert otherwise replace. 
-If index is same but key is different than map with internal key
+```
 
 Steps for retrieve data:
 Get the index, if key found in that index return value
