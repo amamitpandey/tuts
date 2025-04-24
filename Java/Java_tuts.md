@@ -598,6 +598,7 @@ there are two method submit() and shutdown();
 Interface:
 * don't have constuctor
 * only contain public and abstract method(without body) which can be override
+* only contain static final variables;
 * support multiple inhritance by implement method
 
 Abstraction:
