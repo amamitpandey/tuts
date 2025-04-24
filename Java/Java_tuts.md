@@ -112,8 +112,6 @@ integer i = interger.parseof(s)
 
 ## call by value : calling/invoking a method by passing argument 
 
-## Method overloading is the same as polymorphism. 
-
 ## implement vs extends
 ```
 
@@ -365,7 +363,7 @@ finalVar updated 20
 
 
 ``` 
-## Asbtract 
+## Asbtraction 
 
 Abstract data means hide data what required just give same thing, like doctor required only name and age, not educational details
 **interface is 100% abstract**
@@ -394,10 +392,11 @@ class TestAbstractionClass extends AsbtractClass{
 ```
 ### Encapsulation 
 
-is a like a capsule,container catain many chemical, element and serve all at a time.
+is a like a capsule, container catain many chemical, element and serve all at a time.
+it's controlling variable to not directly access by outside, by making it private, hide some data.
 Getter, setter is good example of encapsulation. Access modifier are makes role for data security.
 
-##@ Interface
+// Interface
 
 is a specification/structure, work as a inheritace.
 
@@ -605,8 +604,8 @@ Abstraction:
 * this behave like a class
 * it's has constructor
 * it's has all key access modifier like public, private
-* it may contain narmal method with body(concern method) and abstract method without body
-* don't support multi inhretance, just support single inhritance by extent keyboard. 
+* it may contain normal method with body(concern method) and abstract method without body
+* don't support multi inhretance, just support single inheritance by extent keyboard. 
   
 ### Using int Instead Of String: 
 public static void main (int[] args) : at starting jvm only accept String[]. If try than give - "please define the main method as: public static void main(String[] args)”
