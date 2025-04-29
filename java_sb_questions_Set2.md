@@ -26,19 +26,12 @@ Core Java:
 -	How to read file and store its data in DB
 
 Multithreading:
--	How to implement multithreading
+-	How to implement multithreading : use, new Thread(), extend thread or implement Runnerble, create it and using executor handle those
 -	What’s synchronization 
--	Advantages & disadvantages of Synchronization
+-	Advantages & disadvantages of Synchronization: pros chain which are dependble resource, cons slow performance
 -	How to implement synchronization without impact performance
--	What is thread deadlock. Explain with example
-What’s ThreadLocalStorage class and its purpose
-
-Java8:
--	What all the new features available in Java8?
--	What all the features of Java8 you used in your implementation
--	Explain default methods in Interface & its purpose
--	What is Stream & Lambda functions and its purpose or advantages
--	
+-	What is thread deadlock. Explain with example: when two thread wait for same resouces 
+- What’s ThreadLocalStorage class and its purpose: handle version and memory allocation of thread, provide isolation to work independent
 
 Collections:
 -	Different types of Collections
