@@ -38,7 +38,7 @@ Collections:
 -	What all the Collections you used in the project or in your experience
 -	What is Hashmap and how it works internally?
 -	What’s Concurrent Hashmap and how it works?
--	Difference between Hashmap & Concurrent Hashmap?
+-	Difference between Hashmap & Concurrent Hashmap?: hashmap for single thread while concurrent is for multithread, fail fast & fail safe
 -	What’s LinkedList and how it works
 -	What collection will be used in the scenario for simultaneous read & add operation
 
