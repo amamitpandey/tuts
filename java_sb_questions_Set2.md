@@ -39,8 +39,8 @@ Collections:
 -	What is Hashmap and how it works internally?
 -	What’s Concurrent Hashmap and how it works?
 -	Difference between Hashmap & Concurrent Hashmap?: hashmap for single thread while concurrent is for multithread, fail fast & fail safe
--	What’s LinkedList and how it works
--	What collection will be used in the scenario for simultaneous read & add operation
+-	What’s LinkedList and how it works: used key, value, pointer
+-	What collection will be used in the scenario for simultaneous read & add operation: ConcurrentHashMap, there is no key/value, fast, map.put("A", "Apple"); String value = map.get("A");
 
 
 ORM:
