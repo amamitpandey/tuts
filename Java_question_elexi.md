@@ -115,6 +115,11 @@ Publisher, Subscriber, and Operators in RxJava
 Monads, Futures, and CompletionStage
 13. Java 9+ Modules System
 Module declaration (module-info.java)
+
+
+1.  time complexity of Arraylist vs Linkedlist
+2.  time complexity to search a 5th element of Arraylist vs Linkedlist
+3.  time complexity of forloop
  
 Module dependencies
  
