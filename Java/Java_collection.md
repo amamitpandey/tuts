@@ -834,6 +834,12 @@ Steps for retrieve data:
 Get the index, if key found in that index return value
 In index, value is not found then search for next(use next fn) and return value.   
 
+### optional:
+when we want to work with null value, good way to use optional.
+there we have two method of and nullable
+Optional.ofNullable() // if found null value return empty
+optional.of() // if found null throw null pointer exception
+
 
 ### Fail fast Fail safe
 * Fail fast: we one collection is working in loop and in between we modifiy, then it throw concernModificationException(). it's fast, good for if we try to avoid modification in between. normally work with ArrayList and some collections
