@@ -1,6 +1,35 @@
 CodeTest
 
-Add Fractions
+## to see longest sequence
+```
+
+        int[] int1 = {1, 2, 4, 3, 6, 22, 5, 33};
+        Arrays.sort(int1);
+        for (int i = 0; i < int1.length; i=i+2) {
+            if((i+1)==int1[i]){
+                System.out.println(int1[i]);
+            }
+        }
+```
+## anagram : suffal words
+
+```
+        String s1 = "one";
+        String s2 = "eno";
+        char[] chars1 = s1.toCharArray();
+        char[] chars2 = s2.toCharArray();
+        Arrays.sort(chars1);
+        Arrays.sort(chars2);
+
+        if (Arrays.equals(chars1,chars2)){
+            System.out.println("both s anagram");
+        }else {
+            System.out.println("both s not anagram"+chars1.toString()+"chars1.toString() "+chars2.toString());
+        }
+
+
+```
+## Add Fractions
 
 ```
 class Solution {
