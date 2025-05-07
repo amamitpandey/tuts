@@ -276,6 +276,10 @@ public class ProductService {
 - add both in application.yml
 - create two config file with trasaction manager(@EnableTransactionManagement), add @primary with main DB and another config file don't add @primary
 
+### Spring boot performance: 
+include caching, Lazy loading, profile, verify by virtualJVM, exclude devtool(prod time), lib which is not needed, log disable.   
+
+
 
 
 
