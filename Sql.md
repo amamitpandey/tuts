@@ -1,6 +1,29 @@
 ### SQL query
 
 ## Questions
+### primary key :
+should be not null and unique
+### foriegn key :
+make a relationship between two table, ex, department_id from employee_tbl and department_tbl
+### unique key :
+can be one time null and unique row wise
+### Join:
+- ineer join/ join: common data between two table, subset of left and right table
+- left join : inner join + left join  (full table data of left tbl)
+- right join : inner join + right join (full table data of right tbl)
+- full join : left + right join
+- union : left + right join - duplicates
+- cross join : target cross element like 2*2 array
+
+  ```
+  // ineer join
+SELECT * FROM 
+employee_tbl e
+JOIN department_tble d
+ON e.employee_id==d.employee_id;
+  
+  ```
+
 ### SQL Query to Count the Number of Employees in Each Department sql
 ```
 SELECT department_name, COUNT(*) AS employee_count
