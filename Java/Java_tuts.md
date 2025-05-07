@@ -771,6 +771,38 @@ JVMuse to load by below process
 2. interface is updated with sealed class
 3. introduce with records and Pattern matching.
 4. as normal we see it's enhance the performance, sercurity and LTS(long term support) time.
+- Sealed class/interface: as name suggest seal the class and interface, only those who has permitted to inhritate no else
+  
+  ```
+  public sealed class Shape permits Circle, Square{}
+  public class Circle etends Shape{}
+  public class Square etends Shape{}
+  ```
+- records: concise the beans
+  ```
+  // define
+  public record User(String name, int age){}
+  // use
+  User user = new User("ab",21);
+  sout(user.name());
+  ```
+
+- enhance switch with pattern matching
+  ```
+  String s= switch(obj){
+     case String ss -> "it's a string";
+     case Integar i -> "it's a Integar";
+     default -> "something else";
+  }
+  ```
+ - pattern matching for Instanceof
+   ```
+   if(Obj Instanceof String s){
+   sout(s.UpperCase());
+   }
+   ```
+
+   
 
 ### Marker interface:
 it's empty interface with no method. JVM treat as a special interface, example: serialize.
