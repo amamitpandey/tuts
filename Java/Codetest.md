@@ -29,6 +29,37 @@ CodeTest
 
 
 ```
+```
+        // input -AABBBDDDD
+        // output -A2B3D4
+
+        String s = "AABBBDDDD";
+        StringBuffer stringBuffer = new StringBuffer();
+
+
+        HashMap<Character, Integer> stringHashMap = new HashMap<>();
+        int count = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            s.charAt(i);
+            if(stringHashMap.containsKey(s.charAt(i))){
+                count++;
+                stringHashMap.replace(s.charAt(i),count);
+            }else {
+                count=1;
+                stringHashMap.put(s.charAt(i),count);
+            }
+        }
+        for (Map.Entry<Character, Integer> ss : stringHashMap.entrySet()) {
+
+            stringBuffer.append(ss.getKey()).append(ss.getValue());
+        }
+
+        System.out.println(stringBuffer);
+        System.out.println(stringHashMap);
+
+```
+
 ## Add Fractions
 
 ```
