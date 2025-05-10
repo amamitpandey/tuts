@@ -59,6 +59,21 @@ CodeTest
         System.out.println(stringHashMap);
 
 ```
+```
+        // find pair of sum
+        int[] arr = {1,7,3,6,0,-4};
+        int sum = 7;
+        HashSet<Integer> integers = new HashSet<>();
+
+        for (int element : arr) {
+            int complement = sum - element;
+            if(integers.contains(complement)){
+                System.out.println("first element "+ complement +" Second element "+element);
+            }
+            integers.add(element);
+        }
+
+```
 
 ## Add Fractions
 
