@@ -213,7 +213,7 @@ public class Main {
 ```
 
 ### Strategy Pattern (Behavioral):
-Defines a family of algorithms and lets the client choose one at runtime
+Defines a family of algorithms and lets the client choose one at runtime, benefit loose couple, open-ended
 ```
 interface PaymentStrategy {
     void pay(int amount);
@@ -245,7 +245,7 @@ public class Main {
 }
 
 ```
-
+### jdk internally use gang of four classic design pattern and also use above and varoius design pattern 
 
 
 
