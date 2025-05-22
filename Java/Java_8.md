@@ -40,8 +40,9 @@ no access modifier, no name, no castType, no signature and optional return type.
   
 ### Functional interface(FI) : 
 Ex : 
+// expected return type
 Runnable() ⇒ run()
-
+// use to start thread, don't expected return type
 Callable() => call()
 
 Comparator => compareTo()
