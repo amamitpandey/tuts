@@ -1,5 +1,22 @@
 CodeTest
 
+## return subarray of strings which has only consonants
+
+```
+        //return subarray of strings which has only consonants
+        //output: gym, fly, myth
+        String[] words = {"gym", "sir", "madam", "fly", "myth"};
+        List<Character> list = Arrays.asList('a', 'e', 'i', 'o', 'u');
+
+        ArrayList<String> strings = new ArrayList<>(Arrays.stream(words).map(x -> {
+            if (x.chars().mapToObj(y -> (char) y).noneMatch(k -> list.contains(k))) {
+                return x;
+            }
+            return null;
+        }).filter(z->z!=null).collect(Collectors.toList()));
+        System.out.println(strings);
+```
+
 ## to see longest sequence
 ```
 
