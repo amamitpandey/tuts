@@ -317,8 +317,8 @@ inheritance use (is-a)/blood relation use extends keyword, while Association use
    - aggregation (weak bond)
    - composition ( strong bond)
 Example: Car class
-            - musicPlayer, follow aggregation, both are independable, loss couple
-            - Engine, follow composition, both are tighly couple, egine made for special model   
+            - aggregation: musicPlayer, follow aggregation, both are independable, loss couple
+            - composition: Engine, follow composition, both are tighly couple, egine made for special model   
 
  ## final keyword
  - final class/variable can't modify, same or from another class 
