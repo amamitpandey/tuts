@@ -177,6 +177,12 @@ it handleer all kind or bean context at time creation, deletion.
 
 ## What is the default scope of a bean?
 singleton is first and default, after that we have prototype, request(HTTP), session(HTTP), and application(HTTP) scopes
+in spring boot:
+- Singleton: create only one bean and share all over application
+- Protype: as every request it'll create new bean
+- Request: for every http request it'll create bean
+- Session: add a bean for storing session
+- Application: bean shared all over application.  
 
 ## @mockbean vs @mock
 1. mockbean is part of spring framework used with @springboottest while mock is part of mockito framework used with @RunWith(MokitoRunner)
