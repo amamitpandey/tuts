@@ -1,5 +1,24 @@
 CodeTest
 
+## reverse a string without default method and skip first 3 char from starting
+```
+        int k = 3;
+        String ss = "AmitPandey";
+        String temp = "";
+        String first = ss.substring(0, 3);
+        String rest = ss.substring(3);
+
+        Stack<Character> characters = new Stack<>();
+        for (int i = 0; i < rest.length(); i++) {
+            characters.push(rest.charAt(i));
+        }
+        while (!characters.empty()) {
+            temp = temp + characters.pop();
+        }
+
+        System.out.println(temp + first);
+```
+
 ## return subarray of strings which has only consonants
 
 ```
