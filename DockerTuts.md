@@ -1,11 +1,12 @@
-Docker is a kind of small virtual machine, but not having self resources like RAM, but docker use local machine access and work like isolated. 
+### Docker:
+is a kind of small virtual machine, but not having self resources like RAM, but docker use local machine access and work like isolated. 
 Docker is advance version of virtual machine which use container based concept and share a cloned image where other can use it easily.
 container use hardware resources with help of hypervisor and OS. it uses resources dynamically not pre allocate resources like RAM, processor etc.  
 
 
 
 Docker Command List:
-
+```
 docker run nginx // to start or run new container 
 docker run -p 8080:80 nginx // to map a container internal port with external machine, nginx port no is 80 and                   			       docker container port no is 8080 
 docker ps  // to see running container 
@@ -42,6 +43,6 @@ docker run -it posthog-ubuntu-image
 # for mongo run
 docker run -d -p 27017:27017 --name mymongo mongo
 
-
+```
 
 Cheatsheet Link: https://dockerlabs.collabnix.com/docker/cheatsheet/
