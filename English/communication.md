@@ -211,6 +211,19 @@ CONS / WEAKNESSES:                                | - May lack follow-through on
 
 
 ---
+### Key Takeaway
+
+Matching your approach to **who you are talking to** and **what is at stake** determines success:
+
+* **High Relationship + High Stakes** $\rightarrow$ **Collaborating**
+
+* **High Relationship + Low Stakes** $\rightarrow$ **Accommodating**
+
+* **Low Relationship + High Stakes (Urgent)** $\rightarrow$ **Competing**
+
+* **Time-Sensitive / Moderate Stakes** $\rightarrow$ **Compromising**
+
+* **Low Relationship + Low Stakes / High Emotion** $\rightarrow$ **Avoiding**
 
 ## Summary of Conflict Resolution Styles
 
@@ -262,3 +275,6 @@ CONS / WEAKNESSES:                                | - May lack follow-through on
 * **Motto:** *"Let's find the middle ground"*
 
 * **Focus:** Finding an expedient, mutually acceptable solution where both sides give up something to gain a resolution.
+
+
+
