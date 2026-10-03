@@ -1,6 +1,7 @@
 ### Four Social style frameworks - speak in their to convention them
 						
-```						                                   TASK
+```						                                   
+												TASK
                                                   ^
                                                   |
 ANALYTICAL                                        |                                        DRIVER
