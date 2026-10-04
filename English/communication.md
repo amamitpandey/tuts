@@ -1,6 +1,29 @@
-## Four Social style frameworks - speak in their to convention them
-						
-```						                                   
+###  PYRAMID PRINCIPLE (Executive Summary) for creating repoarting, writing mail
+					
+```			
+                        [ OBJECTIVE / CONCLUSION ]
+                       "Migrate to Cloud Service X"
+                                    |
+          +-------------------------+-------------------------+
+          |                         |                         |
+  [ 1. COST SAVINGS ]       [ 2. SCALABILITY ]        [ 3. RISK REDUCTION ]
+  Save 30% annually         Handle 5x user load       99.99% uptime SLA
+          |                         |                         |
+      +---+---+                 +---+---+                 +---+---+
+      |       |                 |       |                 |       |
+  [METRICS] [DATA]          [METRICS] [DATA]          [METRICS] [DATA]
+
+```
+
+---
+
+* **Level 1 (Top): Conclusion** $\rightarrow$ State the core decision or recommendation upfront.
+* **Level 2 (Middle): Solutions** $\rightarrow$ Group supporting reasons into 2–3 logical pillars.
+* **Level 3 (Bottom): Explanation** $\rightarrow$ Provide supporting facts, data, and implementation details.
+
+
+### SOCIAL STYLES SELF, Deal with same style who is infornt of you
+ ``` 
 												TASK
                                                   ^
                                                   |
@@ -83,9 +106,9 @@ CONS / WEAKNESSES:                                | - May lack follow-through on
                                                   v
                                                PEOPLE
 ```
-## How to calculate yourself, which style you do follow, fill this form and get it
+#### How to calculate yourself, which style you do follow, fill this form and get it
 
-# SOCIAL STYLES SELF-ASSESSMENT
+* SOCIAL STYLES SELF-ASSESSMENT
 **DELOITTE COMMUNICATION MASTERY**  
 **Self-Inventory:** Assertiveness & Responsiveness Ratings  
 **Participant Name:** ________________________   **Date:** ____________  
