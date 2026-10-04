@@ -277,4 +277,78 @@ Matching your approach to **who you are talking to** and **what is at stake** de
 * **Focus:** Finding an expedient, mutually acceptable solution where both sides give up something to gain a resolution.
 
 
+## This model is Stephen Covey’s **Tree of Trust** framework from *The Speed of Trust*. It explains how trust is built, maintained, and divided into two core pillars: **Character** (who you are) and **Competence** (what you can do).
 
+![Image tree_of_trust](./tree_of_trust.png)
+
+Here is a simple breakdown of how the tree components and the 13 behaviors work together:
+
+---
+
+### 1. The Tree Structure: Roots to Fruits
+
+* **Integrity (Roots):** Your core values, honesty, and alignment between your words and actions.
+
+
+* **Intent (Ground Level):** Your underlying motives, agenda, and genuine care for others.
+
+
+* **Capabilities (Trunk & Branches):** Your skills, knowledge, experience, and capacity to deliver.
+
+
+* **Results (Fruits):** Your track record and tangible outcomes.
+
+
+
+> **Key Concept:** Character (Integrity + Intent) is invisible like roots, while Competence (Capabilities + Results) is visible like the tree’s fruit. You need both; strong character without competence makes you well-meaning but ineffective, while high competence without character leads to distrust.
+> 
+> 
+---
+
+### 2. The 13 Behaviors Breakdown
+
+#### A. Character-Based Behaviors (Focus on Integrity & Motives)
+
+1. **Talk Straight:** Be honest, tell the truth, and call things what they are without sugarcoating or manipulating.
+
+
+2. **Demonstrate Respect:** Show genuine care for people, regardless of their role or status.
+
+
+3. **Create Transparency:** Be open, authentic, and operate with no hidden agendas.
+
+
+4. **Right Wrongs:** Apologize quickly, make amends, and demonstrate humility when you make a mistake.
+
+
+5. **Show Loyalty:** Give credit to others, speak about people as if they were present, and represent absent team members fairly.
+
+
+
+#### B. Competence-Based Behaviors (Focus on Execution & Output)
+
+6. **Deliver Results:** Perform as expected and get the right things done on time.
+
+
+7. **Get Better:** Continuously learn, improve your skills, and stay open to feedback.
+
+
+8. **Confront Reality:** Address tough issues directly rather than avoiding uncomfortable truths.
+
+
+9. **Clarify Expectations:** Discuss and validate expectations up front so there are no surprises.
+
+
+10. **Practice Accountability:** Take responsibility for outcomes—both good and bad—and hold others accountable too.
+
+
+
+#### C. Character + Competence Behaviors (Where Values Meet Action)
+
+11. **Listen First:** Seek to understand others before trying to be understood.
+
+
+12. **Keep Commitments:** Do what you say you are going to do—this is the fastest way to build trust.
+
+
+13. **Extend Trust:** Shift from risk-averse control to trusting others appropriately based on the situation. 
